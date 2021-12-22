@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPHIC DESIGN/WEB PUBLISHING</title>
+    <link rel="stylesheet" href="css/graphic-design.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.web-publishing>div .page1').mouseenter(function () {
+                $('.page-border').addClass('on')
+            })
+            $('.web-publishing>div .page1').mouseleave(function () {
+                $('.page-border').removeClass('on')
+            })
+            $('.web-publishing>div .page2').mouseenter(function () {
+                $('.page-border').addClass('on2')
+            })
+            $('.web-publishing>div .page2').mouseleave(function () {
+                $('.page-border').removeClass('on2')
+            })
+            $('.web-publishing>div .page3').mouseenter(function () {
+                $('.page-border').addClass('on3')
+            })
+            $('.web-publishing>div .page3').mouseleave(function () {
+                $('.page-border').removeClass('on3')
+            })
+
+            $('ul .btn1').click(function(){
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.graphic-design').addClass('active')
+                $('.graphic-design').siblings().removeClass('active')
+            })
+            $('ul .btn2').click(function(){
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.web-publishing').addClass('active')
+                $('.web-publishing').siblings().removeClass('active')
+            })
+
+            $('.graphic-design .cont1').click(function(){
+                $('.polygon-bg').show()
+            })
+            $('.polygon-bar ul').click(function(){
+                $('.polygon-bg').hide()
+            })
+            $('.graphic-design .poster1').click(function(){
+                $('.BlackWidow-bg').show()
+            })
+            $('.BlackWidow-bar ul').click(function(){
+                $('.BlackWidow-bg').hide()
+            })
+            $('.graphic-design .poster2').click(function(){
+                $('.insideout-bg').show()
+            })
+            $('.BlackWidow-bar ul').click(function(){
+                $('.insideout-bg').hide()
+            })
+            $('.graphic-design .poster3').click(function(){
+                $('.albumcover-bg').show()
+            })
+            $('.BlackWidow-bar ul').click(function(){
+                $('.albumcover-bg').hide()
+            })
+            $('.graphic-design .poster4').click(function(){
+                $('.universe-bg').show()
+            })
+            $('.BlackWidow-bar ul').click(function(){
+                $('.universe-bg').hide()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="polygon-bg">
+            <div class="polygon">
+                <div class="polygon-bar">
+                    <p>유미의 세포들 (일러스트를 이용한 POLYGON ART)</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="polygon-cont">
+                    <img src="image/pop-polygon.jpg" alt="유미의세포들">
+                </div>
+            </div>
+        </div>
+        <div class="BlackWidow-bg">
+            <div class="BlackWidow">
+                <div class="BlackWidow-bar">
+                    <p>블랙위도우 (일러스트와 포토샵을 이용한 포스터)</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="BlackWidow-cont">
+                    <img src="image/pop-Black-Widow.jpg" alt="Black-Widow">
+                </div>
+            </div>
+        </div>
+        <div class="insideout-bg">
+            <div class="BlackWidow">
+                <div class="BlackWidow-bar">
+                    <p>인사이드아웃 (일러스트와 포토샵을 이용한 포스터)</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="BlackWidow-cont">
+                    <img src="image/pop-insideout.jpg" alt="insideout">
+                </div>
+            </div>
+        </div>
+        <div class="albumcover-bg">
+            <div class="BlackWidow">
+                <div class="BlackWidow-bar">
+                    <p>앨범커버 (포토샵을 이용한 앨범커버)</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="BlackWidow-cont">
+                    <img src="image/pop-cover.jpg" alt="albumcover">
+                </div>
+            </div>
+        </div>
+        <div class="universe-bg">
+            <div class="BlackWidow">
+                <div class="BlackWidow-bar">
+                    <p>우주 포스터 (포토샵을 이용한 우주포스터)</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="BlackWidow-cont">
+                    <img src="image/pop-universe.jpg" alt="albumcover">
+                </div>
+            </div>
+        </div>
+        <div class="inner">
+            <ul>
+                <li class="btn1 show">GRAPHIC DESIGN</li>
+                <li class="btn2">WEB PUBLISHING</li>
+            </ul>
+            <div class="graphic-design active">
+                <div class="cont1">
+                    <a href="#"><img src="image/polygon.jpg" alt="유미의세포들">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="640px"
+                            viewBox="0 0 400 640" style="enable-background:new 0 0 400 640;" xml:space="preserve">
+                            <polyline class="st0" points="0.04,1.5 398.52,1.5 398.52,638.49 1.52,638.49 1.52,1.5 " />
+                        </svg></a>
+                </div>
+                <div class="cont2">
+                    <div class="poster1">
+                        <a href="#"><img src="image/Black-Widow.jpg" alt="블랙위도우">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="310px"
+                                viewBox="0 0 400 310" style="enable-background:new 0 0 400 310;" xml:space="preserve">
+                                <polyline class="st0"
+                                    points="0.05,1.54 398.48,1.54 398.48,308.5 1.54,308.5 1.54,1.54 " />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="no-margin poster2">
+                        <a href="#"><img src="image/insideout.jpg" alt="인사이드아웃">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="310px"
+                                viewBox="0 0 400 310" style="enable-background:new 0 0 400 310;" xml:space="preserve">
+                                <polyline class="st0"
+                                    points="0.05,1.54 398.48,1.54 398.48,308.5 1.54,308.5 1.54,1.54 " />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="poster3">
+                        <a href="#"><img src="image/cover.jpg" alt="앨범커버">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="310px"
+                                viewBox="0 0 400 310" style="enable-background:new 0 0 400 310;" xml:space="preserve">
+                                <polyline class="st0"
+                                    points="0.05,1.54 398.48,1.54 398.48,308.5 1.54,308.5 1.54,1.54 " />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="no-margin poster4">
+                        <a href="#"><img src="image/universe.jpg" alt="우주포스터">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="310px"
+                                viewBox="0 0 400 310" style="enable-background:new 0 0 400 310;" xml:space="preserve">
+                                <polyline class="st0"
+                                    points="0.05,1.54 398.48,1.54 398.48,308.5 1.54,308.5 1.54,1.54 " />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="web-publishing">
+                <div class="cont1">
+                    <div>
+                        <img src="image/sweet-balance.jpg" alt="스윗밸런스">
+                        <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="270px"
+                            viewBox="0 0 400 270" style="enable-background:new 0 0 400 270;" xml:space="preserve">
+                            <polyline class="st0" points="0,1.02 399,1.02 399,269.02 1,269.02 1,1.02 " />
+                        </svg>
+                    </div>
+                    <h3>스윗밸런스 (랜딩페이지)</h3>
+                    <p>참여도 : 100%</p>
+                    <p>사용 tool : Potoshop , illustartor
+                        ,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Visual Studio Code </p>
+                    <p class="page page1"><a href="sweet balance/index.html">PAGE</a></p>
+                </div>
+                <div class="cont2">
+                    <div>
+                        <img src="image/fillart.png" alt="필아트">
+                        <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="270px"
+                        viewBox="0 0 400 270" style="enable-background:new 0 0 400 270;" xml:space="preserve">
+                        <polyline class="st0" points="0,1.02 399,1.02 399,269.02 1,269.02 1,1.02 " />
+                    </svg>
+                    </div>
+                    <h3>필아트 미술학원</h3>
+                    <p>참여도 : 클론 코딩</p>
+                    <p>사용 tool : Visual Studio Code </p>
+                    <p class="page page2"><a href="fellart/index.html">PAGE</a></p>
+                </div>
+                <div class="cont3">
+                    <div>
+                        <img src="image/ikea.png" alt="이케아">
+                        <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="270px"
+                        viewBox="0 0 400 270" style="enable-background:new 0 0 400 270;" xml:space="preserve">
+                        <polyline class="st0" points="0,1.02 399,1.02 399,269.02 1,269.02 1,1.02 " />
+                    </svg>
+                    </div>
+                    <h3>이케아</h3>
+                    <p>참여도 : 클론 코딩</p>
+                    <p>사용 tool : Visual Studio Code </p>
+                    <p class="page page3"><a href="ikea/index.html">PAGE</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="page-border"><img src="image/circle.png" alt=""></div>
+    </div>
+</body>
+
+</html>

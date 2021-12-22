@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB DESIGN</title>
+    <link rel="stylesheet" href="css/web-design.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function () {
+            $('.content .imac div').mouseenter(function () {
+                $('.content .imac div img').addClass('on')
+            })
+            $('.content .imac div').mouseleave(function () {
+                $('.content .imac div img').removeClass('on')
+            })
+
+            $('.content .btn .detail').mouseenter(function () {
+                $('.content .btn p span').addClass('on')
+            })
+            $('.content .btn p').mouseleave(function () {
+                $('.content .btn p span').removeClass('on')
+            })
+            $('.content .btn .page').mouseenter(function () {
+                $('.content .btn p span').addClass('on2')
+            })
+            $('.content .btn .page').mouseleave(function () {
+                $('.content .btn p span').removeClass('on2')
+            })
+
+            $('.button .btn1').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.content .alohadog').addClass('active')
+                $('.content .alohadog').siblings().removeClass('active')
+            })
+            $('.button .btn2').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.content .sweetmill').addClass('active')
+                $('.content .sweetmill').siblings().removeClass('active')
+            })
+            $('.button .btn3').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.content .seoul').addClass('active')
+                $('.content .seoul').siblings().removeClass('active')
+            })
+            $('.button .btn4').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.content .socar').addClass('active')
+                $('.content .socar').siblings().removeClass('active')
+            })
+
+            $('.alohadog .detail').click(function () {
+                $('.detail-sub_alohadog').css({
+                    'display': 'flex'
+                })
+            })
+            $('.sweetmill .detail').click(function () {
+                $('.detail-sub_sweetmill').css({
+                    'display': 'flex'
+                })
+            })
+            $('.seoul .detail').click(function () {
+                $('.detail-sub_seoul').css({
+                    'display': 'flex'
+                })
+            })
+            $('.socar .detail').click(function () {
+                $('.detail-sub_socar').css({
+                    'display': 'flex'
+                })
+            })
+
+            $('ul').click(function () {
+                $('.detail-sub>div').css({
+                    'display': 'none'
+                })
+            })
+
+        })
+        $(document).ready(function () {
+            $('.content>div:nth-child(1)').addClass('active')
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="detail-sub">
+            <div class="detail-sub_alohadog">
+                <div class="sub-alohadog">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <img src="alohadog/subpage.jpg" alt="detail-page">
+                </div>
+            </div>
+            <div class="detail-sub_sweetmill">
+                <div class="sub-alohadog">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <img src="sweet mill/subpage.jpg" alt="detail-page">
+                </div>
+            </div>
+            <div class="detail-sub_seoul">
+                <div class="sub-alohadog">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <img src="서울공예박물관/subpage.jpg" alt="detail-page">
+                </div>
+            </div>
+            <div class="detail-sub_socar">
+                <div class="sub-alohadog">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <img src="쏘카/subpage.jpg" alt="detail-page">
+                </div>
+            </div>
+
+        </div>
+        <section>
+            <div class="sub-page">
+                <div class="button">
+                    <div class="btn1 show">
+                        <div class="line">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="10px"
+                                viewBox="0 0 170 10" style="enable-background:new 0 0 170 10;" xml:space="preserve">
+                                <line class="st0" x1="-0.06" y1="5" x2="169.86" y2="5" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <img src="image/button.png" alt="button">
+                            <p>ALOHA DOG</p>
+                        </div>
+                    </div>
+                    <div class="btn2">
+                        <div class="line">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="10px"
+                                viewBox="0 0 170 10" style="enable-background:new 0 0 170 10;" xml:space="preserve">
+                                <line class="st0" x1="-0.06" y1="5" x2="169.86" y2="5" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <img src="image/button.png" alt="button">
+                            <p>SWEET MILL</p>
+                        </div>
+                    </div>
+                    <div class="btn3">
+                        <div class="line">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="10px"
+                                viewBox="0 0 170 10" style="enable-background:new 0 0 170 10;" xml:space="preserve">
+                                <line class="st0" x1="-0.06" y1="5" x2="169.86" y2="5" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <img src="image/button.png" alt="button">
+                            <p>서울공예박물관</p>
+                        </div>
+                    </div>
+                    <div class="btn4">
+                        <div class="line">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="170px" height="10px"
+                                viewBox="0 0 170 10" style="enable-background:new 0 0 170 10;" xml:space="preserve">
+                                <line class="st0" x1="-0.06" y1="5" x2="169.86" y2="5" />
+                            </svg>
+                        </div>
+                        <div class="text">
+                            <img src="image/button.png" alt="button">
+                            <p>SO CAR</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="alohadog">
+                        <div class="imac">
+                            <img src="image/iMac.png" alt="imac">
+                            <div>
+                                <img src="image/alohadog.jpg" alt="alohadog">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h1>ALOHA DOG <span>(포트폴리오용)</span></h1>
+                            <h3>기존사이트의 불편함을 찾아 개선하였고,<br>
+                                이미지에 맞게 로고,아이콘,배너 모두<br>
+                                새롭게 제작하였습니다.</h3>
+                            <p>참여도:100%</p>
+                            <p>사용 tool : Potoshop , illustartor ,Visual Studio Code </p>
+                        </div>
+                        <div class="btn">
+                            <p class="detail"><a href="#">DETAIL</a><span><img src="image/circle.png"
+                                        alt="circle"></span></p>
+                            <p class="page"><a href="alohadog/index.html">PAGE</a></p>
+                        </div>
+                    </div>
+                    <div class="sweetmill">
+                        <div class="imac">
+                            <img src="image/iMac.png" alt="imac">
+                            <div>
+                                <img src="image/sweet mill.jpg" alt="sweetmill">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h1>SWEET MILL <span>(포트폴리오용)</span></h1>
+                            <h3>기존사이트의 불편함을 찾아 개선하였고,<br>
+                                이미지에 맞게 로고,아이콘,배너 모두<br>
+                                새롭게 제작하였습니다.</h3>
+                            <p>참여도:100%</p>
+                            <p>사용 tool : Potoshop , illustartor ,Visual Studio Code </p>
+                        </div>
+                        <div class="btn">
+                            <p class="detail"><a href="#">DETAIL</a><span><img src="image/circle.png"
+                                        alt="circle"></span></p>
+                            <p class="page"><a href="sweet mill/index.html">PAGE</a></p>
+                        </div>
+                    </div>
+                    <div class="seoul">
+                        <div class="imac">
+                            <img src="image/iMac.png" alt="imac">
+                            <div>
+                                <img src="image/seoul.jpg" alt="서울공예박물관">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h1>서울공예박물관 <span>(포트폴리오용)</span></h1>
+                            <h3>기존사이트의 불편함을 찾아 개선하였고,<br>
+                                이미지에 맞게 로고,아이콘,배너 모두<br>
+                                새롭게 제작하였습니다.</h3>
+                            <p>참여도:100%</p>
+                            <p>사용 tool : Potoshop , illustartor ,Visual Studio Code </p>
+                        </div>
+                        <div class="btn">
+                            <p class="detail"><a href="#">DETAIL</a><span><img src="image/circle.png"
+                                        alt="circle"></span></p>
+                            <p class="page"><a href="서울공예박물관/index.html">PAGE</a></p>
+                        </div>
+                    </div>
+                    <div class="socar">
+                        <div class="imac">
+                            <img src="image/iMac.png" alt="imac">
+                            <div>
+                                <img src="image/socar.jpg" alt="socar">
+                            </div>
+                        </div>
+                        <div class="ipad">
+                            <img src="image/ipad.png" alt="ipad">
+                            <div>
+                                <img src="image/700.png" alt="socar">
+                            </div>
+                        </div>
+                        <div class="iphone">
+                            <img src="image/iPhone X.png" alt="iphone">
+                            <div>
+                                <img src="image/400.png" alt="socar">
+                            </div>
+                        </div>
+                        <div class="text">
+                            <h1>SO CAR <span>(포트폴리오용)</span></h1>
+                            <h3>기존사이트를 조금 변형하여<br>
+                                다양한 넓이에도 대응이 가능하도록<br>
+                                반응형 홈페이지로 제작하였습니다.</h3>
+                            <p>참여도:100%</p>
+                            <p>사용 tool : Potoshop , illustartor ,Visual Studio Code </p>
+                        </div>
+                        <div class="btn">
+                            <p class="detail"><a href="#">DETAIL</a><span><img src="image/circle.png"
+                                        alt="circle"></span></p>
+                            <p class="page"><a href="쏘카/index.html">PAGE</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
