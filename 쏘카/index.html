@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO CAR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.menu .button').click(function () {
+                if ($(this).hasClass('on') == false) {
+                    $(this).addClass('on')
+                    $('header .sub-menu').addClass('on')
+                } else {
+                    $(this).removeClass('on')
+                    $('header .sub-menu').removeClass('on')
+                }
+                if ($(this).hasClass('on2') == false) {
+                    $(this).addClass('on2')
+                    $('header .menu .button li').addClass('on2')
+                } else {
+                    $(this).removeClass('on2')
+                    $('header .menu .button li').removeClass('on2')
+                }
+            })
+
+
+            $(window).scroll(function () {
+                var curTop = $(window).scrollTop()
+                $('#section01 .content').each(function () {
+                    if (curTop >= $(this).offset().top - $(window).height() / 3 && curTop < $(
+                            this).offset().top + $(this).height() - $(window).height() / 3) {
+                        $(this).addClass('on')
+                    } else {
+                        $(this).removeClass('on')
+                    }
+                })
+            })
+
+            var num = 0
+            setInterval(function () {
+                if (num < 2) {
+                    num++
+                } else {
+                    num = 0
+                }
+                $('.slide-cont div').removeClass('on')
+                $('.slide-cont div').eq(num).addClass('on')
+
+                $('.slide .arrow .left,.slide .arrow .right').click(function () {
+                    if (num < 2) {
+                        num++
+                    } else {
+                        num = 0
+                    }
+                    $('.slide-cont div').removeClass('on')
+                    $('.slide-cont div').eq(num).addClass('on')
+                })
+            }, 3000)
+
+            $('#section04 .title ul .btn01').click(function(){
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                $('.content .cont01').addClass('on')
+                $('.content .cont01').siblings().removeClass('on')
+            })
+            $('#section04 .title ul .btn02').click(function(){
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                $('.content .cont02').addClass('on')
+                $('.content .cont02').siblings().removeClass('on')
+            })
+            $('#section04 .title ul .btn03').click(function(){
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                $('.content .cont03').addClass('on')
+                $('.content .cont03').siblings().removeClass('on')
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="menu">
+                <img class="logo" src="image/logo.png" alt="logo">
+                <img class="mini-logo" src="image/logo-mini.png" alt="logo">
+                <ul class="button">
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="sub-menu">
+                <div>
+                    <ul>
+                        <li><a href="#">이용 안내</a></li>
+                        <li><a href="#">요금 안내</a></li>
+                        <li><a href="#">혜택 안내</a></li>
+                        <li><a href="#">쏘카존 개설 신청</a></li>
+                        <li><a href="#">쏘카 서비스</a>
+                            <ul class="service-sub">
+                                <li><a href="#">쏘카 비즈니스플랜</a></li>
+                                <li><a href="#">쏘카 플랜</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text">
+                <p class="text01">차가 필요한</p>
+                <p class="text02">모든 순간,쏘카</p>
+            </div>
+        </header>
+        <section id="section01">
+            <div class="inner">
+                <div class="content">
+                    <div class="text">
+                        <h1>24시간 언제나<span></span></h1>
+                        <p>
+                            한밤중이나<br>
+                            주말에도<br>
+                            스마트폰으로<br>
+                            시간에 구애받지 않고<br>
+                            쏘카와 함께<br>
+                            이동하세요.
+                        </p>
+                        <span>
+                            한밤중이나 주말에도 스마트폰으로<br>
+                            시간에 구애받지 않고 쏘카와 함께 이동하세요.
+                        </span>
+                    </div>
+                    <div class="img">
+                        <img src="image/se01-cont1.png" alt="content1">
+                    </div>
+                </div>
+                <div class="content content02">
+                    <div class="img img02">
+                        <img src="image/se01-cont2.png" alt="content2">
+                    </div>
+                    <div class="text">
+                        <h1>다양한 차종을<span></span></h1>
+                        <p>
+                            연인과의 드라이브부터<br>
+                            가족 캠핑까지<br>
+                            상황에 맞게<br>
+                            50여 종의 차량을<br>
+                            선택해서<br>
+                            이용하세요.
+                        </p>
+                        <span>
+                            연인과의 드라이브부터 가족 캠핑까지<br>
+                            상황에 맞게 50여 종의 차량을 선택해서 이용하세요.
+                        </span>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h1>필요한 시간만큼<span></span></h1>
+                        <p>
+                            간단한 장보기부터<br>
+                            주말여행까지<br>
+                            10분 단위로<br>
+                            원하는 만큼만<br>
+                            이용하세요.
+                        </p>
+                        <span>
+                            간단한 장보기부터 주말여행까지<br>
+                            10분 단위로 원하는 만큼만 이용하세요.
+                        </span>
+                    </div>
+                    <div class="img">
+                        <img src="image/se01-cont3.png" alt="content3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section02">
+            <div class="inner">
+                <h1><img src="image/se02-logo.png" alt="logo"> 서비스</h1>
+                <p class="title">나에게 꼭 맞는 방법으로 다양한 쏘카의 서비스를 이용해보세요.</p>
+                <div class="service">
+                    <div class="service-cont">
+                        <div><img src="image/se02-cont1.png" alt="content1"></div>
+                        <div>
+                            <p class="h3">스마트한 직장인의 이동</p>
+                            <p class="h3"> 쏘카 비즈니스</p>
+                            <span></span>
+                            <p>법인 전용 서비스로</p>
+                            <p> 임직원은 더 편리하게 이용하고,</p>
+                            <p> 회사의 불필요한 비용은 줄여보세요.</p>
+                            <span></span>
+                            <p class="border"><a href="#">쏘카 비지니스 바로가기<img src="image/go-arrow.png" alt="attow"></a></p>
+                        </div>
+                    </div>
+                    <div class="service-cont02">
+                        <div><img src="image/se02-cont2.png" alt="content1"></div>
+                        <div>
+                            <p class="h3">쏘카를 더 오래 더 자유롭게</p>
+                                <p class="h3">쏘카 플랜</p>
+                                <span></span>
+                            <p>1개월부터 36개월까지 쏘카를 원하는</p>
+                            <p> 기간만큼 빌려 내 차처럼 사용하세요.</p>
+                            <span></span>
+                                <p class="border"><a href="#">쏘카 플랜 바로가기<img src="image/go-arrow.png" alt="attow"></a></p>
+                        </div>      
+                    </div>
+                    <div class="service-cont03">
+                        <div><img src="image/se02-cont3.png" alt="content1"></div>
+                        <div>
+                            <p class="h3">취향으로 연결되는 새로운 카셰어링</p>
+                                <p class="h3">쏘카 페어링</p>
+                                <span></span>
+                            <p>오늘 나에게 가장 잘 어울리는 차를</p>
+                            <p> 이웃에게 빌려</p>
+                                <p> 멋진 추억을 만들어보세요.</p>
+                                <span></span>
+                            <p class="border"><a href="#">쏘카 페어링 바로가기<img src="image/go-arrow.png" alt="attow"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section03">
+            <div class="inner">
+                <div>
+                    <div class="text">
+                        <h1>차가 필요한 모든 순간,쏘카와 함께하세요.</h1>
+                        <h3>쏘카 앱으로 모든 서비스를 간편하게</h3>
+                        <p>쏘카 가입,예약,이용까지 3분이면 OK!
+                            지금 쏘카 앱을 다운로드 하세요. </p>
+                    </div>
+                    <div class="slide">
+                        <div class="arrow">
+                            <img class="left" src="image/arrow-gray-left.png" alt="arrow">
+                            <img class="right" src="image/arrow-gray-right.png" alt="arrow">
+                            <!-- <img class="left-b" src="image/arrow-black-left.png" alt="arrow">
+                            <img class="right-b" src="image/arrow-black-right.png" alt="arrow"> -->
+                        </div>
+                        <div class="slide-cont">
+                            <div class="cont01 on">
+                                <img src="image/slide-1.png" alt="slide">
+                            </div>
+                            <div class="cont02">
+                                <img src="image/slide-2.png" alt="slide">
+                            </div>
+                            <div class="cont03">
+                                <img src="image/slide-3.png" alt="slide">
+                            </div>
+                            <p><img src="image/slide-1.png" alt="none"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section04">
+            <div class="inner">
+                <h1>쏘카만의 혜택</h1>
+                <div class="title">
+                    <ul>
+                        <li class="btn01 on">부름서비스</li>
+                        <li class="btn02">패스포트</li>
+                        <li class="btn03">쏘카마이존</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="cont01 on">
+                        <div class="text">
+                            <h3>언제 어디서나 부르면 쏘카가 오는 부름서비스</h3>
+                            <p>내 근처 주차가 가능한 위치로 </p>
+                            <p>쏘카를 불러 편하게 이용하세요.</p>
+                            <span><a href="#">예약하러가기<img src="image/go-arrow.png" alt="arrow"></a></span>
+                        </div>
+                        <div class="img">
+                            <img src="image/se04-cont1.png" alt="content1">
+                        </div>
+                    </div>
+                    <div class="cont02">
+                        <div class="text">
+                            <h3>언제나 부담없이 편하게 이동!</h3>
+                            <p>패스포트 하나로 쏘카부터 타다까지</p>
+                            <p>어떤 상황에서든 편하게 이동하고</p>
+                            <p> 1년 내내 혜택 받으세요.</p>
+                            <span><a href="#">멤버쉽 혜택 확인하기<img src="image/go-arrow.png" alt="arrow"></a></span>
+                        </div>
+                        <div class="img">
+                            <img src="image/se04-cont2.png" alt="content2">
+                        </div>
+                    </div>
+                    <div class="cont03">
+                        <div class="text">
+                            <h3>내 집 앞에서 언제든 쏘카를!</h3>
+                            <p>내 집, 회사 근처에 쏘카존을 만들고</p>
+                            <p> 전 차종 적용 가능한 반값 패스도 누리세요.</p>
+                            <span><a href="#">신청하러 가기<img src="image/go-arrow.png" alt="arrow"></a></span>
+                        </div>
+                        <div class="img">
+                            <img src="image/se04-cont3.png" alt="content3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="inner">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">나눔카</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">위치정보</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">차량손해면책제도</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                </ul>
+                <div class="text">
+                    <div>
+                        <p>주소. 제주특별자치도 제주시 연미길 42 (오라삼동)</p>
+                        <p>전화. 1661-3315 </p>
+                        <p class="no-margin">팩스. 02-6969-9333</p>
+                    </div>
+                    <div>
+                        <p>주)쏘카 통신판매업 사업자정보 확인</p>
+                        <p>신고: 제 2019-제주오라-3호, 사업자등록번호: 616-81-90529, 대표자: 박재욱</p>
+                        <p class="no-margin">© 2019 SOCAR All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
