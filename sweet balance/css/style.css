@@ -1,0 +1,323 @@
+@charset "utf-8";
+@font-face {
+    font-family: sc7;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: sc4;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+}
+@font-face {
+    font-family: sc6;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+#warp{
+    width: 100%;
+    min-width: 1200px;
+}
+
+#in_warp{
+    width: 1200px;
+    margin: 0 auto;
+    background: url(../images/header_background.png) no-repeat;
+}
+
+header{
+    height: 880px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.logo{
+    position: absolute;
+    top:20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+
+.logo_w{
+    position: absolute;
+    top:15px;
+}
+
+
+.he_main{
+    position: relative;
+    top:185px;
+}
+
+main .se_top{
+    background:url(../images/se_back1-1.png) no-repeat;
+    background-position: center;
+    height: 1215px;
+    margin-bottom:150px ;
+}
+
+main h1{
+    text-align: center;
+    color: #014d0b;
+    font-size: 36pt;
+    position: relative;
+    top: 40px;
+    margin-bottom: 90px;
+    font-family: sc7;
+}
+
+.cont1{
+    background-image: url(../images/feel\ easy.png);
+    background-repeat: no-repeat;
+    height: 328px;
+    background-position: center;
+    color: #fff;
+    text-align: right;
+    padding: 70px 180px;
+    box-sizing: border-box;
+}
+
+.cont1 span{
+    font-family: 'Yesteryear', cursive;
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+.cont1 h2,.cont3 h2{
+    border-right:3px solid #fff ;
+    padding-right: 10px;
+    font-size: 25pt;
+    font-family: sc6;
+}
+
+.cont1 p,.cont2 p,.cont3 p{
+    font-size: 18pt;
+    font-family: sc4;
+}
+
+.cont2 h2{
+    font-family: sc6;
+    font-size: 25pt;
+    border-left:3px solid #fff ;
+    padding-left: 10px;
+}
+
+.cont2{
+    background-image: url(../images/balance.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 328px;
+    margin: 20px;
+    color:#fff;
+    padding: 80px 150px;
+    box-sizing: border-box;
+}
+
+.cont3{
+    background-image: url(../images/beef.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 328px;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 80px 200px;
+}
+
+main .main{
+    background: url(../images/se_back2.png);
+    height: 2850px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.main ul li{
+    display: inline-block;
+}
+
+.first h2{
+    padding: 100px 0 0 15px;
+    font-size: 25pt;
+    font-family: sc4;
+    font-weight: normal;
+}
+
+.first li{
+    padding: 30px;
+}
+
+.first li h3{
+    padding: 5px;
+    font-family: sc4;
+    font-size: 20pt;
+    font-weight: normal;
+}
+
+.first li p{
+    font-family: sc4;
+    font-size: 15pt;
+}
+
+.main div h2{
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-family: sc4;
+    font-size: 25pt;
+}
+
+.main div img{
+    padding: 10px 10px;
+}
+
+.second h2{
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+
+.second ul li{
+    padding:30px;
+    border-right:3px solid #fff ;
+    height: 250px;
+    font-family: sc4;
+}
+
+.second ul li:last-child{
+    border-right: none;
+}
+
+.second ul li img{
+    height: 171px;
+}
+
+.youtube iframe{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.last{
+    text-align: center;
+    margin-bottom: 170px;
+    position: relative;
+}
+
+.last p{
+    font-family: sc6;
+    font-size: 25pt;
+    margin-bottom: 50px;
+}
+
+.last ul li{
+    display: inline-block;
+}
+
+.last ul li h2{
+    font-family: sc4;
+    font-size: 20pt;
+    font-weight: normal;
+    margin-bottom:10px ;
+}
+
+.last img{
+    margin-bottom: 5px;
+}
+
+.last ul li p{
+    font-family: sc4;
+    font-size: 15pt;
+}
+
+.last ul .icon1{
+    position: absolute;
+    left: 185px;
+}
+
+.last ul .icon2{
+    position: absolute;
+    left: 420px;
+}
+
+.last ul .icon3{
+    position: absolute;
+    right: 380px;
+}
+
+.last ul .icon4{
+    position: absolute;
+    right: 170px;
+}
+
+footer{
+    background:url(../images/se_back3.png);
+    height: 500px;
+    color:#FFF;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 60px 230px;
+}
+
+footer table tr,td{
+    font-family: sc4;
+    font-size: 20pt;
+    padding: 5px 10px;
+}
+
+#name{
+    height: 40px;
+    width: 600px;
+}
+
+#tel{
+    height: 40px;
+    width: 549px;
+}
+
+#email{
+    height: 40px;
+    width: 573px;
+}
+
+#address{
+    height: 100px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+#submit{
+    padding: 15px 30px;
+    font-size: 20pt;
+    font-family: sc6;
+    color:#666;
+    border-radius: 30px;
+}
+
+footer table input{
+    font-size: 15pt;
+}
+
+footer table input:focus{
+    outline: none;
+}
+
+
+
+
