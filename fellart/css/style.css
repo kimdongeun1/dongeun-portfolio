@@ -1,0 +1,452 @@
+#wrap{
+    width: 100%;
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fix,
+.fix::before,
+.fix::after{
+    clear: both;
+    display: block;
+    content: '';
+    zoom: 1;
+}
+
+/*********************header****************************/
+
+#header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header .top {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+header .left {
+    float: left;
+}
+
+header .right {
+    float: right;
+}
+
+header .right a {
+    padding: 0 10px;
+    border-right: 1px solid #888;
+    display: block;
+    float: left;
+}
+
+header .right a.yel {
+    color: yellow;
+    border-right: 0;
+}
+
+/*********************nav****************************/
+
+nav {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.main {}
+
+.main>li {
+    float: left;
+    position: relative;
+}
+
+.main>li a {
+    padding: 10px 23px;
+    display: block;
+    font-weight: bold;
+}
+
+.sub {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: none;
+    height: 266px;
+}
+
+.sub li a {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    letter-spacing: -0.8px;
+}
+
+.sub-bg {
+    width: 100%;
+    height: 266px;
+    border-top: 1px solid #ddd;
+    background-color: white;
+    position: absolute;
+    top: 41px;
+    z-index: 10;
+    display: none;
+}
+
+nav .main>li:hover>a {
+    color: rgb(176, 143, 255);
+}
+
+
+
+#sec1 div{
+    float: left;
+    width: calc(100% / 5);
+    text-align: center;
+    color: #222;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    margin-bottom: 100px;
+}
+
+#sec1 div p{
+    font-size: 15px;
+}
+
+#sec1 div .big{
+    font-size: 17px;
+    padding: 20px 0;
+}
+
+#sec1 .cont1{
+    text-align: left;
+}
+
+#sec1 .cont1 span{
+    border-top: 3px solid #222;
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+#sec1 .cont1 h1{
+    color: rgb(129, 97, 243);
+    padding-bottom: 109px;
+}
+
+#sec1 .cont5{
+    margin-right: 0;
+    border: 2px solid rgb(129, 97, 243);
+    box-sizing: border-box;
+    background-color: rgb(222, 214, 253);
+}
+
+
+#sec2 div div{
+    float: left;
+    width: calc((100% - 10px) / 3);
+    margin-right: 5px;
+}
+
+#sec2 div .no-margin{
+    margin-right: 0;
+}
+
+#sec2 div .banner11{
+    width: 100%;
+    margin: 50px 0;
+}
+
+#sec2 div img{
+    width: 100%;
+}
+
+
+#sec3{
+    margin-bottom: 50px;
+}
+
+#sec3 .cont1{
+    float: left;
+    margin-right: 20px;
+}
+
+#sec3 .cont1 div{
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#sec3 .cont1 .text a{
+    display: block;
+    white-space: nowrap;
+    padding: 5px 15px;
+}
+
+#sec3 .youtube{
+    float: right;
+}
+
+
+#sec4{
+    margin-bottom: 50px;
+}
+
+#sec4 div div{
+    float: left;
+    width: calc(100% / 3);
+}
+
+#sec4 div img{
+    width: 100%;
+}
+
+#sec5{
+    color: #222;
+    margin-bottom: 50px;
+}
+
+#sec5 span{
+    border-top: 3px solid #222;
+    width: 20px;
+    height: 5px;
+    display: block;
+}
+
+#sec5 h1 span{
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 10px;
+    border: none;
+    display: inline;
+}
+
+.review>div>div {
+    position: relative;
+}
+
+.review>div>div img {
+    width: 100%;
+
+}
+
+.review .left {
+    width: 75%;
+    float: left;
+}
+
+.review .left>div {
+    width: calc((100% - 30px) / 3);
+    float: left;
+    margin-right: 10px;
+    height: 190px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: darkgoldenrod;
+}
+
+.review .left>div.hh {
+    width: calc((((100% - 30px) / 3) * 2) + 10px);
+}
+
+.review .right {
+    width: 25%;
+    float: right;
+}
+
+.review .right>div {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: darkgoldenrod;
+}
+
+.review div.vv {
+    height: 390px;
+}
+
+.review>div>div>a.good {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.review>div>div>a.heart {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#sec6{
+    color: #222;
+    margin-bottom: 50px;
+}
+
+#sec6 span{
+    border-top: 3px solid #222;
+    width: 20px;
+    height: 5px;
+    display: block;
+}
+
+#sec6 h1 span{
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 10px;
+    display: inline;
+    border: none;
+}
+
+#sec6 .sec-img{
+    margin-bottom: 20px;
+}
+
+#sec6 .cont{
+    height: 620px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#sec6 .on{
+    height: 1240px;
+}
+
+#sec6 .cont>div{
+    width: 280px;
+    margin: 0 10px 10px 10px;
+    float: left;
+}
+
+#sec6 .cont>div img{
+    width: 100%;
+}
+
+#sec6 .btn{
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.drop{
+    display: none;
+}
+
+#sec8{
+    margin-bottom: 50px;
+}
+
+#sec8>div{
+    display: flex;
+    justify-content: center;
+}
+
+#sec8>div div{
+    margin-right: 20px;
+}
+
+#sec8>div .map{
+    width: 492px;
+    height: 435px;
+}
+#sec8>div .notic{
+    width: 347px;
+    height: 435px;
+    overflow: hidden;
+}
+
+#sec8>div .notic a{
+    display: block;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+#sec8>div .no-margin{
+    margin-right: 0;
+}
+
+#sec9{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#footer{
+    padding-bottom: 50px;
+}
+
+#footer>div{
+    display: flex;
+}
+
+#footer>div .sns{
+    margin-left: auto;
+}
+#footer>div .sns .cont a{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    height: 40px;
+    font-weight: bold;
+}
+
+#footer>div .text .cont a{
+    display: inline-block;
+    width: 180px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+
+
+#quick{
+    position: fixed;
+    right: 30px;
+    top: 500px;
+    transition: all 0.5s;
+}
+#quick a{
+    display: block;
+}
+
+#popup1{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.close img{
+    position: relative;
+    top: -5px;
+}
+
+.scr{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    position: fixed;
+    top: 500px;
+    left: 30px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 30px;
+}

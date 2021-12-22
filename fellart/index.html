@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
+  <title>Fill Art</title>
+  <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+   <![endif]-->
+  <link href="css/common.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(function () {
+      $('.slide').slick({
+        infinite: true, //무한슬라이드
+        speed: 500, //변화할때 속도
+        fade: true, //페이드인 아웃 버전
+        cssEase: 'linear', //가속도
+        autoplay: true, //자동슬라이드
+        autoplaySpeed: 3000, //자동슬라이드 시간
+      });
+
+      $('nav').mouseenter(function () {
+        $('.sub').stop().slideDown()
+        $('.sub-bg').stop().slideDown()
+      })
+      $('nav').mouseleave(function () {
+        $('.sub').stop().slideUp()
+        $('.sub-bg').stop().slideUp()
+      })
+
+      $('.more').click(function () {
+        $('.cont').addClass('on')
+        $(this).hide()
+        $(this).siblings().show()
+      })
+      $('.drop').click(function () {
+        $('.cont').removeClass('on')
+        $(this).hide()
+        $(this).siblings().show()
+      })
+
+      $('.close').click(function () {
+        $('#popup1').hide()
+      })
+
+
+      $(window).scroll(function () {
+
+        var location = $(window).scrollTop().toFixed(0)
+        // toFixed=소수점을 없애준다
+
+        $('.scrtop').text(location)
+        // 글자를 변형할때 text를 씀
+
+        if ($(window).scrollTop() >= 500) {
+          $('#quick').css({
+            top: '100px'
+          })
+        } else {
+          $('#quick').css({
+            top: '500px'
+          })
+        }
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- <div class="scr">
+      <span class="scrtop">0</span>:scrollTop
+    </div> -->
+    <div id="quick">
+      <a href="#"><img src="image/quick_03.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_06.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_08.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_10.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_12.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_14.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_16.png" alt="quick"></a>
+      <a href="#"><img src="image/quick_18.png" alt="quick"></a>
+    </div>
+    <div id="popup1">
+      <img src="image/pop_01.jpg" alt="">
+      <span class="close"><img src="image/btn_popclose.gif" alt=""></span>
+    </div>
+    <header id="header">
+      <div class="top">
+        <div class="inner fix">
+          <div class="left">
+            <a href="#">365일 넘치는 미술혁명 / 필아트</a>
+          </div>
+          <div class="right">
+            <a href="#none">회원가입</a>
+            <a href="#none">로그인</a>
+            <a href="#none">Q&A</a>
+            <a href="#none">1:1상담</a>
+            <a href="#none">고객센터</a>
+            <a href="#none">고객후기</a>
+            <a href="#none">가맹후기</a>
+            <a href="#none" class="yel">필아트 가맹문의</a>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div><a href="#none"><img src="image/slide1.jpg" alt="slide"></a></div>
+        <div><a href="#none"><img src="image/slide2.jpg" alt="slide"></a></div>
+        <div><a href="#none"><img src="image/slide3.jpg" alt="slide"></a></div>
+      </div>
+    </header>
+    <nav id="nav">
+      <ul class="main inner">
+        <li><a href="#">세상에모든 미술,필아트</a>
+          <ul class="sub">
+            <li><a href="#">융합미술백화점,필아트</a></li>
+            <li><a href="#">미래를 향한 교육연구소</a></li>
+            <li><a href="#">일반미술학원VS필아트교육센터</a></li>
+            <li><a href="#">교육이념</a></li>
+            <li><a href="#">필아트TV</a></li>
+            <li><a href="#">수상 및 연혁</a></li>
+          </ul>
+        </li>
+        <li><a href="#">365일 넘치는 미술혁명</a>
+          <ul class="sub">
+            <li><a href="#">전문 미술 심리검사 무료</a></li>
+            <li><a href="#">필아트 미술</a></li>
+            <li><a href="#">필큐빅 아트</a></li>
+            <li><a href="#">필아트 코딩</a></li>
+            <li><a href="#">필아트 애니</a></li>
+            <li><a href="#">필아트디렉터</a></li>
+          </ul>
+        </li>
+        <li><a href="#">E-교육시스템</a>
+          <ul class="sub">
+            <li><a href="#">필아트 이러닝</a></li>
+            <li><a href="#">필아트 교육앱</a></li>
+          </ul>
+        </li>
+        <li><a href="#">리얼후기</a>
+          <ul class="sub">
+            <li><a href="#">교육후기</a></li>
+            <li><a href="#">가맹후기</a></li>
+          </ul>
+        </li>
+        <li><a href="#">커리큘럼</a>
+          <ul class="sub">
+            <li><a href="#">4~5세</a></li>
+            <li><a href="#">6~7세</a></li>
+            <li><a href="#">초등저학년</a></li>
+            <li><a href="#">초등고학년</a></li>
+            <li><a href="#">중등부</a></li>
+            <li><a href="#">고등부</a></li>
+          </ul>
+        </li>
+        <li><a href="#">필아트 커뮤니티</a>
+          <ul class="sub">
+            <li><a href="#">커뮤니케이션 게시판</a></li>
+            <li><a href="#">필아트 작가들</a></li>
+            <li><a href="#">1:1상담</a></li>
+            <li><a href="#">QnA</a></li>
+          </ul>
+        </li>
+        <li><a href="#">가맹문의</a>
+          <ul class="sub">
+            <li><a href="#">필아트만의 경쟁력</a></li>
+            <li><a href="#">가맹/창업소개</a></li>
+            <li><a href="#">운영관리시스템</a></li>
+            <li><a href="#">창업성공스토리</a></li>
+            <li><a href="#">가맹비용</a></li>
+            <li><a href="#">추천사</a></li>
+            <li><a href="#">개설상담</a></li>
+          </ul>
+        </li>
+        <li><a href="#">교육원찾기</a></li>
+      </ul>
+      <hr>
+      <div class="sub-bg"></div>
+    </nav>
+    <section id="sec1" class="inner fix">
+      <div class="cont1">
+        <span></span>
+        <h3>365일 넘치는 미술혁명</h3>
+        <h1>필아트</h1>
+        <p>전국 14,526명의<br>학부모들이<br>필아트를 사랑하는 이유</p>
+      </div>
+      <div>
+        <a href="#"><img src="image/365_1.jpg" alt=""></a>
+        <p class="big">비교해보세요</p>
+        <p>지금의 미술과<br>과거의 미술들을</p>
+      </div>
+      <div>
+        <a href="#"><img src="image/365_2.jpg" alt=""></a>
+        <p class="big">필아트 교육이념</p>
+        <p>"행복한 사람,<br>세상의 진정한 리더를 만든다."</p>
+      </div>
+      <div>
+        <a href="#"><img src="image/365_3.jpg" alt=""></a>
+        <p class="big">LIVE ART</p>
+        <p>시대와 호흡하는 미술을<br>드리고 싶은 마음 필아트TV</p>
+      </div>
+      <div class="cont5">
+        <a href="#"><img src="image/365_4.jpg" alt=""></a>
+        <p class="big">축하해주세요</p>
+        <p>새로운 필아트가<br>여러분 앞에 인사드립니다.</p>
+      </div>
+    </section>
+    <section id="sec2">
+      <div class="inner fix">
+        <div>
+          <a href="#"><img src="image/banner_01.jpg" alt=""></a>
+        </div>
+        <div>
+          <a href="#"><img src="image/banner_02.jpg" alt=""></a>
+        </div>
+        <div class="no-margin">
+          <a href="#"><img src="image/banner_03.jpg" alt=""></a>
+        </div>
+        <div class="fix banner11">
+          <a href="#"><img src="image/banner11.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <section id="sec3">
+      <div class="inner fix">
+        <div class="cont1">
+          <div>
+            <a href="#"><img src="image/br_successstory.jpg" alt=""></a>
+          </div>
+          <div class="text">
+            <a href="#">· [동두천필아트] 필아트미술 추석특집보강안내</a>
+            <a href="#">· [동두천미술/필아트본원/아동미술/유아미술/초등미술]친환경 인테리어 소품 스톤아트~~!!</a>
+            <a href="#">· [동두천필아트미술본원] 동두천필아트/필아트미술/동두천미술/아동미술/필아트/유아미술/필아트홍</a>
+            <a href="#">· [동두천필아트미술본원]동두천필아트/필아트미술/동두천미술/필아트본원/아동미술/유아미술/홍보영</a>
+            <a href="#">· [동두천필아트본원] 동두천미술 / 필아트미술 / 동두천필아트 / 아동미술/ 초등미술 /유아</a>
+            <a href="#">· [동두천필아트] 필아트미술 추석특집보강안내</a>
+            <a href="#">· [동두천미술/필아트본원/아동미술/유아미술/초등미술]친환경 인테리어 소품 스톤아트~~!!</a>
+            <a href="#">· [동두천필아트미술본원] 동두천필아트/필아트미술/동두천미술/아동미술/필아트/유아미술/필아트홍</a>
+            <a href="#">· [동두천필아트미술본원]동두천필아트/필아트미술/동두천미술/필아트본원/아동미술/유아미술/홍보영</a>
+            <a href="#">· [동두천필아트본원] 동두천미술 / 필아트미술 / 동두천필아트 / 아동미술/ 초등미술 /유아</a>
+            <a href="#">· [동두천필아트] 필아트미술 추석특집보강안내</a>
+            <a href="#">· [동두천미술/필아트본원/아동미술/유아미술/초등미술]친환경 인테리어 소품 스톤아트~~!!</a>
+            <a href="#">· [동두천필아트미술본원] 동두천필아트/필아트미술/동두천미술/아동미술/필아트/유아미술/필아트홍</a>
+            <a href="#">· [동두천필아트미술본원]동두천필아트/필아트미술/동두천미술/필아트본원/아동미술/유아미술/홍보영</a>
+            <a href="#">· [동두천필아트본원] 동두천미술 / 필아트미술 / 동두천필아트 / 아동미술/ 초등미술 /유아</a>
+          </div>
+        </div>
+        <div class="youtube">
+          <iframe width="580" height="400" src="https://www.youtube.com/embed/i-y9-unuf78" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="sec4">
+      <div class="inner fix">
+        <div>
+          <a href="#"><img src="image/banner12_03.png" alt=""></a>
+        </div>
+        <div>
+          <a href="#"><img src="image/banner12_05.png" alt=""></a>
+        </div>
+        <div>
+          <a href="#"><img src="image/banner12_07.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <section id="sec5">
+      <div class="inner fix">
+        <span></span>
+        <h1>필아트 후기<span>Feelart Review</span></h1>
+        <div class="review fix">
+          <div class="left">
+            <div class="vv">
+              <a href="#"><img src="image/photo2_1.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+            <div>
+              <a href="#"><img src="image/photo2_2.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+            <div>
+              <a href="#"><img src="image/photo2_3.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+            <div>
+              <a href="#"><img src="image/photo2_5.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+            <div>
+              <a href="#"></a>
+              <a href="#" class="good"><img src="image/icon1_b.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2_b.png" alt=""></a>
+            </div>
+            <div class="hh">
+              <a href="#"><img src="image/photo2_7.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1_b.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2_b.png" alt=""></a>
+            </div>
+            <div>
+              <a href="#"><img src="image/photo2_8.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+          </div>
+          <div class="right">
+            <div>
+              <a href="#"><img src="image/photo2_4.jpg" alt=""></a>
+              <a href="#" class="good"><img src="image/icon1.png" alt=""></a>
+              <a href="#" class="heart"><img src="image/icon2.png" alt=""></a>
+            </div>
+            <div class="vv">
+              <a href="#"></a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="sec6">
+      <div class="inner">
+        <span></span>
+        <h1>필아트 교과과정<span>Feelart Edu</span></h1>
+        <div class="sec-img">
+          <a href="#"><img src="image/br_edu.jpg" alt=""></a>
+        </div>
+        <div class="cont fix">
+          <div>
+            <div><img src="image/photo_03.jpg" alt=""></div>
+            <p>필큐빅아트</p>
+          </div>
+          <div>
+            <div><img src="image/photo_05.jpg" alt=""></div>
+            <p>퍼포먼스</p>
+          </div>
+          <div>
+            <div><img src="image/photo_07.jpg" alt=""></div>
+            <p>초등/중등,고등미술</p>
+          </div>
+          <div>
+            <div><img src="image/photo_09.jpg" alt=""></div>
+            <p>창의드로잉북</p>
+          </div>
+          <div>
+            <div><img src="image/photo_03.jpg" alt=""></div>
+            <p>필큐빅아트</p>
+          </div>
+          <div>
+            <div><img src="image/photo_05.jpg" alt=""></div>
+            <p>퍼포먼스</p>
+          </div>
+          <div>
+            <div><img src="image/photo_07.jpg" alt=""></div>
+            <p>초등/중등,고등미술</p>
+          </div>
+          <div>
+            <div><img src="image/photo_09.jpg" alt=""></div>
+            <p>창의드로잉북</p>
+          </div>
+          <div>
+            <div><img src="image/photo_03.jpg" alt=""></div>
+            <p>필큐빅아트</p>
+          </div>
+          <div>
+            <div><img src="image/photo_05.jpg" alt=""></div>
+            <p>퍼포먼스</p>
+          </div>
+          <div>
+            <div><img src="image/photo_07.jpg" alt=""></div>
+            <p>초등/중등,고등미술</p>
+          </div>
+          <div>
+            <div><img src="image/photo_09.jpg" alt=""></div>
+            <p>창의드로잉북</p>
+          </div>
+          <div>
+            <div><img src="image/photo_03.jpg" alt=""></div>
+            <p>필큐빅아트</p>
+          </div>
+          <div>
+            <div><img src="image/photo_05.jpg" alt=""></div>
+            <p>퍼포먼스</p>
+          </div>
+          <div>
+            <div><img src="image/photo_07.jpg" alt=""></div>
+            <p>초등/중등,고등미술</p>
+          </div>
+          <div>
+            <div><img src="image/photo_09.jpg" alt=""></div>
+            <p>창의드로잉북</p>
+          </div>
+        </div>
+        <div class="btn more">더보기</div>
+        <div class="btn drop">줄이기</div>
+      </div>
+    </section>
+    <section id="sec7">
+      <div class="inner">
+        <img src="image/br_academy.jpg" alt="">
+      </div>
+    </section>
+    <section id="sec8">
+      <div class="inner">
+        <div class="map">
+          <img src="image/map.jpg" alt="map">
+        </div>
+        <div class="notic">
+          <img src="image/fill_news.jpg" alt="공지사항">
+          <p>
+            <a href="#">· (아동서적)떼쓰고 산만하고 밥투정하는 내 아이</a>
+            <a href="#">· 평화 그리기대회</a>
+            <a href="#">· 사춘기 아이와의 대화</a>
+            <a href="#">· 비밀의 왕국</a>
+            <a href="#">· 엄마가 꼭 알아야할 조기교육 7계명</a>
+            <a href="#">· 가족愛발견</a>
+            <a href="#">· 엄마들이 미처 알지 못한 내 아이의 숨은 가능성!</a>
+            <a href="#">· (아동서적)떼쓰고 산만하고 밥투정하는 내 아이</a>
+            <a href="#">· 평화 그리기대회</a>
+            <a href="#">· 사춘기 아이와의 대화</a>
+            <a href="#">· 비밀의 왕국</a>
+            <a href="#">· 엄마가 꼭 알아야할 조기교육 7계명</a>
+            <a href="#">· 가족愛발견</a>
+            <a href="#">· 엄마들이 미처 알지 못한 내 아이의 숨은 가능성!</a>
+          </p>
+        </div>
+        <div class="notic no-margin">
+          <img src="image/fill_center.jpg" alt="신규분원">
+          <p>
+            <a href="#"> · [파주 야당점] 필아트 미술</a>
+            <a href="#"> · [창원 진해 자은점] 필아트미술</a>
+            <a href="#"> · [충남 천안 서북구 불당점] 필아트 미술</a>
+            <a href="#"> · [대전 가오점] 필아트 미술</a>
+            <a href="#"> · [오산 부산점] 필아트 미술</a>
+            <a href="#"> · [천안 신방점] 필아트미술</a>
+            <a href="#"> · [충북 증평점] 필아트미술</a>
+            <a href="#"> · [광명 소하점]필아트 미술</a>
+            <a href="#"> · [시흥 능곡점] 필아트 미술</a>
+            <a href="#"> · [마곡 엠벨리점] 필아트 미술</a>
+            <a href="#"> · [파주 야당점] 필아트 미술</a>
+            <a href="#"> · [창원 진해 자은점] 필아트미술</a>
+            <a href="#"> · [충남 천안 서북구 불당점] 필아트 미술</a>
+            <a href="#"> · [대전 가오점] 필아트 미술</a>
+            <a href="#"> · [오산 부산점] 필아트 미술</a>
+            <a href="#"> · [천안 신방점] 필아트미술</a>
+            <a href="#"> · [충북 증평점] 필아트미술</a>
+            <a href="#"> · [광명 소하점]필아트 미술</a>
+            <a href="#"> · [시흥 능곡점] 필아트 미술</a>
+            <a href="#"> · [마곡 엠벨리점] 필아트 미술</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="sec9">
+      <div>
+        <img src="image/br_greenumbrella.jpg" alt="초록우산 어린이재단">
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="inner">
+        <div>
+          <img src="image/fill_footer_logo.gif" alt="logo">
+        </div>
+        <div class="text">
+          <p class="cont">
+            <a href="#">개인정보 취급방침</a><a href="#">이용약관</a>
+          </p>
+          <p>상호명:(주)필아트에듀 <span>대표:이혜진</span></p>
+          <p>주소:경기도의정부시신흥로232번길5-8,6층</p>
+          <p>사업자등록번호:245-81-00733</p>
+          <p>전화번호:1899-7615</p>
+          <p>메일:zzogzzogzzog@naver.com</p>
+        </div>
+        <div class="sns">
+          <div class="cont">
+            <p><a href="#">필아트만의 경쟁력</a><a href="#">가맹/창업소개</a><a href="#">운영관리시스템</a></p>
+            <p><a href="#">창업성공스토리</a><a href="#">가맹비용</a><a href="#">추천사</a></p>
+          </div>
+          <div>
+            <a href="#"><img src="image/sns_07.png" alt="sns"></a>
+            <a href="#"><img src="image/sns_09.png" alt="sns"></a>
+            <a href="#"><img src="image/sns_11.png" alt="sns"></a>
+            <a href="#"><img src="image/sns_13.png" alt="sns"></a>
+            <a href="#"><img src="image/sns_15.png" alt="sns"></a>
+            <a href="#"><img src="image/sns_17.png" alt="sns"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>
