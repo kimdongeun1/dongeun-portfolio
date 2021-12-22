@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> aloha dog</title>
+
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        $(document).ready(function () {
+            $('.main-banner').bxSlider();
+
+            $('.main,.sub_bg').hover(function () {
+                $('.sub').stop().slideDown()
+                $('.sub_bg').stop().slideDown()
+
+            }, function () {
+                $('.sub').stop().slideUp()
+                $('.sub_bg').stop().slideUp()
+
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="top-banner">
+            <a href="#"><img src="images/Chuseok banner.png" alt="banner"></a>
+        </div>
+        <header class="fix">
+            <div class="inner">
+                <div class="header01">
+                    <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
+                    <nav class="top">
+                        <ul>
+                            <li><a href="#"><img src="images/login icon.png" alt="login"></a></li>
+                            <li><a href="#"><img src="images/join icon.png" alt="join"></a></li>
+                            <li><a href="#"><img src="images/bag icon.png" alt="bag"></a></li>
+                        </ul>
+                    </nav>
+                    <nav class="bottom">
+                        <ul class="main">
+                            <li><a href="#">유치원</a>
+                                <ul class="sub">
+                                    <li><a href="#">이용안내&요금</a></li>
+                                    <li><a href="#">시간표</a></li>
+                                    <li><a href="#">원생프로필</a></li>
+                                    <li><a href="#">예약</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">호텔</a>
+                                <ul class="sub">
+                                    <li><a href="#">이용안내&요금</a></li>
+                                    <li><a href="#">예약</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">놀이방</a>
+                                <ul class="sub">
+                                    <li><a href="#">이용안내&요금</a></li>
+                                    <li><a href="#">예약</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">SERVICE</a>
+                                <ul class="sub">
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                    <li><a href="#">상담문의</a></li>
+                                    <li><a href="#">이용후기</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="sub_bg"></div>
+        </header>
+        <section class="slide">
+            <div class="main-banner">
+                <div class="banner1">
+                    <img src="images/main banner1.png" alt="banner">
+                    <p>"반려견들에게 집과 가장 비슷한 환경에 자연을 더한 알로하도그를 만나게 해주세요"</p>
+                    <a href="#">알로하 도그 둘러보기</a>
+                </div>
+                <div class="banner2">
+                    <img src="images/main banner2.png" alt="banner">
+                    <div><a href="#"><img src="images/instar icon.png" alt="sns"></a>
+                        <a href="#"><img src="images/facebook icon.png" alt="sns"></a></div>
+                </div>
+                <div class="banner3"><img src="images/main banner3.png" alt="banner">
+                    <div>
+                        <h1>"사지마세요,입양하세요"</h1>
+                        <p>매년 전국적으로 10마리이상의 동물들이 유기됩니다.<br>포인핸드를 통해 유기동물들의 가족이 되어주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="inner menu-m">
+                <div class="kindergarten">
+                    <a href="#"><img src="images/kindergarten icon.png" alt="유치원">
+                        <h3>유치원</h3>
+                        <p>알로하 도그만의<br>프로그램으로 행복하고<br>즐겁게 생활하게 합니다.</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/hotel icon.png" alt="호텔">
+                        <h3>호텔</h3>
+                        <p>알로하 도그는 체계적인<br>운영으로안전한<br>돌봄 서비스를 제공합니다</p>
+                    </a>
+                </div>
+                <div>
+                    <a href="#"><img src="images/playroom icon.png" alt="놀이방">
+                        <h3>놀이방</h3>
+                        <p>단 몇시간을 맡기더라도<br>자연속에서 즐겁게<br>뛰놀 수 있습니다.</p>
+                    </a>
+                </div>
+                <div class="mall">
+                    <a href="#"><img src="images/onlinemall icon.png" alt="온라인몰">
+                        <h3>온라인몰</h3>
+                        <p>알로하 도그만의<br>특별한 제품들을<br>만나보세요.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="snack fix">
+            <div class="inner-s">
+                <h2>오늘의 간식</h2>
+                <div class="snack-m">
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack01.png" alt="snack">
+                                <h3>고구마 쿠키</h3>
+                                <p>고구마<br>코코넛<br>계란</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack02.png" alt="snack">
+                                <h3>돼지고기 볼</h3>
+                                <p>한돈 돼지고기<br>단호박<br>당근<br>양배추</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack03.png" alt="snack">
+                                <h3>피자</h3>
+                                <p>두부<br>파프리카<br>고구마<br>당근</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack04.png" alt="snack">
+                                <h3>닭가슴살 단호박 퓨레</h3>
+                                <p>닭가슴살<br>단호박<br>브로콜리<br>당근</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack05.png" alt="snack">
+                                <h3>날치알 초밥</h3>
+                                <p>애호박<br>당근<br>브로콜리</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="snack-s">
+                        <div class="content">
+                            <a href="#">
+                                <img src="images/snack06.png" alt="snack">
+                                <h3>스쿱 쿠키</h3>
+                                <p>단호박<br>비트<br>고구마<br>블루베리</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="made-m">
+            <div class="inner made">
+                <h2>made in aloha♥</h2>
+                <div>
+                    <a href="#"><img src="images/ddong.png" alt="배변봉투"></a>
+                    <p><a href="#">알로하 배변봉투(3ea) 5,000won</a></p>
+                </div>
+                <div class="water">
+                    <a href="#"><img src="images/water.png" alt="물그릇"></a>
+                    <p><a href="#">알로하 산책 물그릇 3,000won</a></p>
+                </div>
+            </div>
+        </section>
+        <section class="review fix">
+            <div class="inner-m review-m">
+                <h2>Review</h2>
+                <div><a href="#"><img src="images/review1img.png" alt="review">
+                        <div class="text">
+                            <h3>★★★★★</h3>
+                            <em>유치원 보냈더니 사회화도 완벽하게!</em>
+                            <p>더기우기**</p>
+                        </div>
+                    </a></div>
+                <div><a href="#"><img src="images/review2img.png" alt="review">
+                        <div class="text">
+                            <h3>★★★★★</h3>
+                            <em>믿고 맡기는 알로하도그! </em>
+                            <p>dog07**</p>
+                        </div>
+                    </a></div>
+                <div><a href="#"><img src="images/review3img.png" alt="review">
+                        <div class="text">
+                            <h3>★★★★★</h3>
+                            <em>벌써 세번째 호텔링..</em>
+                            <p>hodon**</p>
+                        </div>
+                    </a></div>
+                <div><a href="#"><img src="images/review4img.png" alt="review">
+                        <div class="text">
+                            <h3>★★★★★</h3>
+                            <em>저희 애가 너무 잘놀아요</em>
+                            <p>보름이네**</p>
+                        </div>
+                    </a></div>
+                <div class="review05"><a href="#"><img src="images/review5img.png" alt="review">
+                        <div class="text">
+                            <h3>★★★★★</h3>
+                            <em>알로하 파티! 이 간식들을 다 수제로 준비하셨다니 정말 대단하세요 </em>
+                            <p>ddong**</p>
+                        </div>
+                    </a></div>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="inner">
+                <div class="photo"><a href="#"><img src="images/photo banner.png" alt="photo"></a></div>
+                <div class="hotel"><a href="#"><img src="images/hotel banner.png" alt="hotel"></a></div>
+                <div class="instagram"><a href="#"><img src="images/instagram banner.png" alt="instagram"></a></div>
+            </div>
+        </section>
+        <footer class="fix">
+            <div class="inner">
+                <ul>
+                    <li><img src="images/footer-logo.png" alt="logo"></li>
+                    <li>상호 : 알로하 도그 <span> 대표자명 : 류현정</span><br>
+                        사업자등록번호 : 000-00-00000<br>
+                        주소 : 경기도 양평군 강상면 병산리 645-1<br>
+                        www.aloha dog.co.kr <span> instagram : alohadok</span></li>
+                    <li>
+                        <p>대표전화<br><em>051-666-8147</em></p><br>
+                        <p>계좌번호<br><em>국민은행 102708-04-205691</em></p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
