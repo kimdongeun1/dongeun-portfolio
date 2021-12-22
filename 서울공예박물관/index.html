@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울공예박물관</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.slide').slick({
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 3000,
+                pauseOnHover : false,
+            });
+
+            $('.close').click(function () {
+                $('.sub').removeClass('on')
+                $('.menu-btn span').removeClass('on2')
+            })
+
+            $('.menu-btn').click(function () {
+                if ($(this).hasClass('on') == false) {
+                    $(this).addClass('on')
+                    $('.sub').addClass('on')
+                } else {
+                    $(this).removeClass('on')
+                    $('.sub').removeClass('on')
+                }
+                if ($(this).hasClass('on2') == false) {
+                    $(this).addClass('on2')
+                    $('.menu-btn span').addClass('on2')
+                } else {
+                    $(this).removeClass('on2')
+                    $('.menu-btn span').removeClass('on2')
+                }
+            })
+
+            $('.sub-slide-cont').slick({
+                slide: 'div',
+                infinite: true,
+                // speed: 500,
+                centerMode: true,
+                cssEase: 'linear',
+                // autoplay: true,
+                // autoplaySpeed: 3000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                // centerPadding: '60px',
+                arrows: true,
+                // dots:true,
+                asNavFor:'.sub-slide-cont02,.sub-slide-cont03'
+            });
+            $('.sub-slide-cont .slick-track>div:last-child').addClass('last')
+            $('.sub-slide-cont02').slick({
+                asNavFor:'.sub-slide-cont,.sub-slide-cont03'
+            })
+            $('.sub-slide-cont03').slick({
+                asNavFor:'.sub-slide-cont,.sub-slide-cont02',
+                arrows: false,
+            });
+
+
+            $('.title01').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.tab .content01').addClass('active')
+                $('.tab .content01').siblings().removeClass('active')
+            })
+            $('.title02').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.tab .content02').addClass('active')
+                $('.tab .content02').siblings().removeClass('active')
+            })
+            $('.title03').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.tab .content03').addClass('active')
+                $('.tab .content03').siblings().removeClass('active')
+            })
+            $('.title04').click(function () {
+                $(this).addClass('show')
+                $(this).siblings().removeClass('show')
+                $('.tab .content04').addClass('active')
+                $('.tab .content04').siblings().removeClass('active')
+            })
+
+            $('.arrow').click(function () {
+                if ($(this).hasClass('on') == false) {
+                    $(this).addClass('on')
+                    $('.next-cont').addClass('on')
+                } else {
+                    $(this).removeClass('on')
+                    $('.next-cont').removeClass('on')
+                }
+            })
+
+            $('.cont01 .btn01').click(function () {
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                $('.cont01 .text .notice').addClass('show')
+                $('.cont01 .text .notice').siblings().removeClass('show')
+            })
+            $('.cont01 .btn02').click(function () {
+                $(this).addClass('on')
+                $(this).siblings().removeClass('on')
+                $('.cont01 .text .news').addClass('show')
+                $('.cont01 .text .news').siblings().removeClass('show')
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="menu-bg"></div>
+            <div class="sub">
+                <div class="close"><img src="image/sub-close.png" alt="닫기"></div>
+                <div class="sub-bg"></div>
+                <div class="sub-title">
+                    <img src="image/logo.png" alt="logo">
+                    <div>
+                        <ul>
+                            <li class="fix">
+                                <a href="#"><img src="image/sub manu-insta.png" alt="imstragram"></a>
+                                <a href="#"><img src="image/sub manu-youtube.png" alt="youtube"></a>
+                                <a href="#"><img src="image/sub manu-facebook.png" alt="facebook"></a>
+                                <a href="#"><img src="image/sub manu-blog.png" alt="naver blog"></a>
+                            </li>
+                            <li>030-61 서울특별시 종로구 율곡로3길 4 (안국동)<br>
+                                대표전화: 02-6450-7000</li>
+                            <li>© Seoul Museum of Craft Art. ALL RIGHTS RESERVED</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-cont">
+                    <ul>
+                        <li>
+                            <h3>관람 및 이용</h3>
+                        </li>
+                        <li><a href="#">관람안내</a></li>
+                        <li><a href="#">박물관지도</a></li>
+                        <li><a href="#">전시해설</a></li>
+                        <li><a href="#">단체관람예약</a></li>
+                        <li><a href="#">예약하기</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>전시</h3>
+                        </li>
+                        <li><a href="#">상설전시</a></li>
+                        <li><a href="#">기획전시</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>프로그램</h3>
+                        </li>
+                        <li><a href="#">프로그램신청</a></li>
+                        <li><a href="#">과거프로그램</a></li>
+                        <li><a href="#">자료모음</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>공예탐색</h3>
+                        </li>
+                        <li><a href="#">탐색안내</a></li>
+                        <li><a href="#">소장자료</a></li>
+                        <li><a href="#">도서</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>어린이박물관</h3>
+                        </li>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">관람</a></li>
+                        <li><a href="#">프로그램</a></li>
+                    </ul>
+                    <ul class="fix">
+                        <li>
+                            <h3>소개</h3>
+                        </li>
+                        <li><a href="#">박물관소개</a></li>
+                        <li><a href="#">건립부지역사</a></li>
+                        <li><a href="#">조직</a></li>
+                        <li><a href="#">소식</a></li>
+                        <li><a href="#">기증및후원</a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>연구,출판</h3>
+                        </li>
+                        <li><a href="#">연구</a></li>
+                        <li><a href="#">출판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span><a href="#none">menu</a></span>
+                        </li>
+                        <li class="login"><a href="#"><img src="image/login icon.png" alt="로그인"></a>
+                            <p><a href="#">로그인</a><a href="#">회원가입</a></p>
+                        </li>
+                        <li class="reserve"><a href="#"><img src="image/reserve icon.png" alt="예약"></a>
+                            <p><a href="#">예약하기</a></p>
+                        </li>
+                        <ul class="language">
+                            <li><a href="#">KR</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                </nav>
+            </div>
+            <div class="slide">
+                <div class="banner01">
+                    <img src="image/mainbanner-1.png" alt="mainbanner">
+                    <div>
+                        <img src="image/flower1.png" alt="flower">
+                        <img src="image/flower2.png" alt="flower">
+                        <img src="image/flower3.png" alt="flower">
+                        <img src="image/mainbanner-1-logo.png" alt="logo">
+                        <img src="image/moon.png" alt="moon">
+                        <img src="image/cloud.png" alt="cloud">
+                        <div class="door">
+                            <img class="left" src="image/door-left.png" alt="door">
+                            <img class="right" src="image/door-right.png" alt="door">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner02"><a href="#"><img src="image/mainbanner-2.png" alt="mainbanner"></a></div>
+                <div class="banner03">
+                    <a href="#">
+                        <img class="logo" src="image/logo-whiet.png" alt="logo">
+                        <img src="image/mainbanner-3.png" alt="mainbanner"></a>
+                </div>
+            </div>
+            <div class="special">
+                <div><a href="#">개관특별전</a></div>
+                <div><a href="#">개관특별전</a></div>
+            </div>
+        </header>
+        <section id="section01">
+            <h1><img src="image/logo-mini.png" alt="logo"><span>전시</span></h1>
+            <div class="sub-slide">
+                <div class="sub-slide-cont">
+                    <div class="first"><a href="#"><img src="image/display-master.png" alt="장인,세상을이롭게하다"></a></div>
+                    <div><a href="#"><img src="image/display-needlepoint.png" alt="자수,꽃이피다"></a></div>
+                    <div><a href="#"><img src="image/display-cloth.png" alt="보자기:일상을감싸다"></a></div>
+                    <div><a href="#"><img src="image/display-from korea.png" alt="I'm from korea"></a></div>
+                    <div><a href="#"><img src="image/display-color.png" alt="공예,만색"></a></div>
+                    <div><a href="#"><img src="image/display-objects.png" alt="objects"></a></div>
+                </div>
+                <div class="sub-slide-text">
+                    <span></span>
+                    <div class="sub-slide-cont02">
+                        <div>
+                            <h3>장인,세상을 이롭게 하다</h3>
+                            <p>전시유형 : 공예역사<br>
+                                전시소재 : 나무와 칠, 뼈·뿔·조개껍데기, 도자<br>
+                                키워드 : 왕실, 견양, 사대부, 일상, 장인
+                            </p>
+                        </div>
+                        <div>
+                            <h3>자수, 꽃이 피다</h3>
+                            <p>전시유형 : 직물공예, 기증.기탁<br>
+                                전시소개 : 섬유, 종이<br>
+                                키워드 : 자수, 병풍, 복식, 자수도구
+                            </p>
+                        </div>
+                        <div>
+                            <h3>보자기, 일상을 감싸다</h3>
+                            <p>전시유형 : 직물공예, 기증.기탁<br>
+                                전시소개 : 섬유, 종이<br>
+                                키워드 : 보자기, 조각보
+                            </p>
+                        </div>
+                        <div>
+                            <h3>아임 프롬 코리아</h3>
+                            <p>전시유형 : 아카이브<br>
+                                전시소개 : 그 밖에 모든 것<br>
+                                키워드 : 예용해, 국외소재문화재, 인간문화재
+                            </p>
+                        </div>
+                        <div>
+                            <h3>공예, 만색</h3>
+                            <p>전시유형 : 시민소통공예프로젝트<br>
+                                전시소개 : 가죽과 털, 나무와 칠<br>
+                                키워드 : 크래프트윈도우, 공예_만색
+                            </p>
+                        </div>
+                        <div>
+                            <h3>공예작품설치 프로젝트</h3>
+                            <p>전시유형 : 시민소통공예프로젝트<br>
+                                전시소개 : 유리와 보석, 풀과 대나무, 돌, 도자<br>
+                                키워드 : 안내데스크, 휴게의자, 외벽 장식
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-slide-number">
+                    <div class="sub-slide-cont03">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                    <span>/6</span>
+                </div>
+            </div>
+        </section>
+        <section id="section02">
+            <h1><img src="image/logo-mini.png" alt="logo"><span>프로그램</span></h1>
+            <a class="more" href="#">더보기</a>
+            <div class="program">
+                <div class="program-cont">
+                    <img src="image/program-cont bg.png" alt="background">
+                    <div class="program-img">
+                        <img src="image/program-music.png" alt="공예:가 음악을 품다">
+                        <h3>공예:가 음악을 품다</h3>
+                        <span></span>
+                        <p>진행기간 2021.09.02~2021.12.31<br>
+                            교육대상 모든시민(별도신청없음)</p>
+                    </div>
+                    <div class="program-icon">
+                        <a href="#"><img src="image/program-book-icon.png" alt="icon">교육중</a>
+                    </div>
+                </div>
+                <div class="program-cont top">
+                    <img src="image/program-cont bg.png" alt="background">
+                    <div class="program-img">
+                        <img src="image/program-book.png" alt="도서관">
+                        <h3>공예도서실 운영</h3>
+                        <span></span>
+                        <p>진행기간 2021.09.01~2021.12.31<br>
+                            교육대상 모든시민(별도신청없음)</p>
+                    </div>
+                    <div class="program-icon">
+                        <a href="#"><img src="image/program-book-icon.png" alt="icon">교육중</a>
+                    </div>
+                </div>
+                <div class="program-cont">
+                    <img src="image/program-cont bg.png" alt="background">
+                    <div class="program-img">
+                        <img src="image/program-broom.png" alt="빗자루공예">
+                        <h3>절기별 공예감상-가을애빗자루</h3>
+                        <span></span>
+                        <p>진행기간 2021.10.22~2021.12.17<br>
+                            교육대상 어린이,가족,성인</p>
+                    </div>
+                    <div class="program-icon">
+                        <a href="#"><img src="image/program-book-icon.png" alt="icon">교육중</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section03">
+            <div class="title">
+                <h2><img src="image/logo.png" alt="logo"></h2>
+                <span></span>
+                <p>박물관 안내도</p>
+                <p class="small">각 층별로 박물관이 어떻게 구성돼있는지 확인해 보세요.</p>
+            </div>
+            <ul class="title-btn">
+                <li class="title01 show">전시1동</li>
+                <li class="title02">전시2동</li>
+                <li class="title03">전시3동</li>
+                <li class="title04">교육동<br><span>어린이박물관</span></li>
+            </ul>
+            <div class="tab">
+                <div class="content01 active">
+                    <div class="main-content">
+                        <div><img src="image/map-1dong main.png" alt="1동"></div>
+                        <div class="main-text">
+                            <h3>전시1동</h3>
+                            <ul>
+                                <li><span>1F</span>안내데스크 / 전시실 / 도서실</li>
+                                <li><span>2F</span>상설전시실</li>
+                                <li><span>3F</span>기획전시실</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-content">
+                        <div class="next-cont">
+                            <div><a href="#"><img src="image/map-1dong 1f.png" alt="1동-1F"><span>1F</span></a></div>
+                            <div><a href="#"><img src="image/map-1dong 2f.png" alt="1동-2F"><span>2F</span></a></div>
+                            <div><a href="#"><img src="image/map-1dong 3f.png" alt="1동-3F"><span>3F</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content02">
+                    <div class="main-content">
+                        <div><img src="image/map-2dong main.png" alt="2동"></div>
+                        <div class="main-text">
+                            <h3>전시2동</h3>
+                            <ul>
+                                <li><span>1F</span>지역공예실 / 야외휴게실</li>
+                                <li><span>2F</span>상설전시실</li>
+                                <li><span>3F</span>공예아카이브실</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-content">
+                        <div class="next-cont">
+                            <div><a href="#"><img src="image/map-2dong 1f.png" alt="2동-1F"><span>1F</span></a></div>
+                            <div><a href="#"><img src="image/map-2dong 2f.png" alt="2동-2F"><span>2F</span></a></div>
+                            <div><a href="#"><img src="image/map-2dong 3f.png" alt="2동-3F"><span>3F</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content03">
+                    <div class="main-content">
+                        <div><img src="image/map-3dong main.png" alt="3동"></div>
+                        <div class="main-text">
+                            <h3>전시3동</h3>
+                            <ul>
+                                <li><span>1F</span>안내데스크 / 사랑방 / 크래프트윈도우</li>
+                                <li><span>2F</span>상설전시실 / 자수공방</li>
+                                <li><span>3F</span>상설전시실 / 기증자기념공간</li>
+                                <li><span>4F</span>보이는수장고 / 보존과학실 / 세미나실</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-content">
+                        <p class="arrow"><img src="image/map-3dong arrow.png" alt="arrow"></p>
+                        <div class="next-cont">
+                            <div><a href="#"><img src="image/map-3dong 1f.png" alt="3동-1F"><span>1F</span></a></div>
+                            <div><a href="#"><img src="image/map-3dong 2f.png" alt="3동-2F"><span>2F</span></a></div>
+                            <div><a href="#"><img src="image/map-3dong 3f.png" alt="3동-3F"><span>3F</span></a></div>
+                            <div><a href="#"><img src="image/map-3dong 4f.png" alt="3동-4F"><span>4F</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content04">
+                    <div class="main-content">
+                        <div><img src="image/map-4dong main.png" alt="교육동"></div>
+                        <div class="main-text">
+                            <h3>교육동</h3>
+                            <ul>
+                                <li><span>1F</span>안내데스크 / 강당</li>
+                                <li><span>2F</span>어린이박물관</li>
+                                <li><span>3F</span>어린이박물관</li>
+                                <li><span>4F</span>박물관카페 / 교육실</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-content">
+                        <div class="next-cont">
+                            <div><a href="#"><img src="image/map-4dong 1f.png" alt="교육동-1F"><span>1F</span></a></div>
+                            <div><a href="#"><img src="image/map-4dong 2f.png" alt="교육동-2F"><span>2F</span></a></div>
+                            <div><a href="#"><img src="image/map-4dong 3f.png" alt="교육동-3F"><span>3F</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section04">
+            <div class="history">
+                <img src="image/history.png" alt="소개">
+                <img class="logo" src="image/logo-mini-white.png" alt="logo">
+                <div class="text">
+                    <a href="#">서울공예박물관 소개<span><img src="image/map-3dong arrow.png" alt="arrow"></span></a>
+                    <a href="#">서울공예박물관 건립부지 역사<span><img src="image/map-3dong arrow.png" alt="arrow"></span></a>
+                </div>
+            </div>
+            <div class="parking">
+                <img src="image/parking.png" alt="주차">
+                <a href="#" class="parking01">
+                    <img src="image/parking-icon.png" alt="parking-icon">
+                    <img class="hover" src="image/parking-icon hover.png" alt="parking-icon">
+                </a>
+                <a href="#" class="parking02">
+                    <img src="image/parking-icon.png" alt="parking-icon">
+                    <img class="hover" src="image/parking-icon hover.png" alt="parking-icon">
+                </a>
+                <a href="#" class="parking03">
+                    <img src="image/parking-icon.png" alt="parking-icon">
+                    <img class="hover" src="image/parking-icon hover.png" alt="parking-icon">
+                </a>
+                <a href="#" class="parking04">
+                    <img src="image/parking-icon.png" alt="parking-icon">
+                    <img class="hover" src="image/parking-icon hover.png" alt="parking-icon">
+                </a>
+                <div class="text">
+                    <img src="image/parking-icon.png" alt="주차">
+                    <p>서울공예박물관은 조선시대 안동별궁터에 자리하고 있습니다.<br>
+                        박물관 주변의 역사 문화 유적을 보호하기 위해 주차장을 운영하고 있지 않으니,<br>
+                        인근의 주차장을 이용해주시기 바랍니다.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-cont">
+                <div class="cont01">
+                    <ul class="fix">
+                        <li class="on btn01">공지사항</li>
+                        <li class="btn02">보도자료</li>
+                    </ul>
+                    <div class="text">
+                        <div class="notice show">
+                            <a href="#"><em>어린이박물관 사전관람 운영확대안내</em><span>2021.11.03</span></a>
+                            <a href="#"><em>공예도서실 운영방식 변경에 따른 이용안내</em><span>2021.09.05</span></a>
+                            <a href="#"><em>서울공예박물관 홈페이지에 오신 것을 환영합니다 !</em><span>2021.07.09</span></a>
+                            <a href="#"><em>서울공예박물관 개관 전 사전관람 및 온라인 사전예약 방법 안내</em><span>2021.07.09</span></a>
+                        </div>
+                        <div class="news">
+                            <a href="#"><em>(석간)서울공예박물관, 박물관 체험교구 SeMoCA 공예가방 개발</em><span>2021.11.03</span></a>
+                            <a href="#"><em>(석간) 서울공예박물관, 국내 최초 이동식 아카이브 개발…1호 '백자공예상자'
+                                    공개</em><span>2021.09.05</span></a>
+                            <a href="#"><em>(석간) 서울공예박물관, 대한제국 황실 의례용 공예품 '은제이화문합' 국가등록문화재
+                                    등록예고</em><span>2021.07.09</span></a>
+                            <a href="#"><em>서울공예박물관, ‘가을愛 빗자루’ 짚풀 공예 비대면 온라인 교육으로 코로나에 지친 시민들에게 가을맞이
+                                    선물</em><span>2021.07.09</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont02 kid-m">
+                    <h2><img src="image/logo-footer-white.png" alt="logo">어린이 박물관</h2>
+                    <a href="#"><img src="image/kid museum.png" alt="어린이박물관"></a>
+                </div>
+                <div class="cont02">
+                    <h2><img src="image/logo-footer-white.png" alt="logo">CHANNEL</h2>
+                    <ul class="sns">
+                        <li><a href="#"><img src="image/footer-insta.png" alt="인스타그램">
+                                <p>Instagram</p>
+                            </a></li>
+                        <li><a href="#"><img src="image/footer-youtube.png" alt="유투브">
+                                <p>Youtube</p>
+                            </a></li>
+                        <li><a href="#"><img src="image/footer-blog.png" alt="네이버블로그">
+                                <p>Naver Blog</p>
+                            </a></li>
+                        <li><a href="#"><img src="image/footer-facebook.png" alt="페이스북">
+                                <p>Facebook</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-cont02 fix">
+                <ul class="inner">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">저작권정책</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                </ul>
+            </div>
+            <div class="footer-cont03 inner">
+                <div class="logo">
+                    <img src="image/footer-logo.png" alt="logo">
+                    <img class="seoul" src="image/footer-seoul.png" alt="seoul logo">
+                    <p>너와나의서울</p>
+                </div>
+                <div class="text">
+                    <p>030-61 서울특별시 종로구 율곡로3길 4 (안국동)<br>
+                        대표전화: 02-6450-7000</p>
+                    <p>© Seoul Museum of Craft Art. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
