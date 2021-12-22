@@ -1,0 +1,346 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: SLEIGothic;
+    src: url(../font/SLEIGothicTTF.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+body{
+    color: #fff;
+    font-family: SLEIGothic;
+}
+
+#wrap{
+    width: 100%;
+    margin: auto;
+}
+
+.inner{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #202545;
+    overflow: hidden;
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button>div{
+    margin-bottom: 140px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button>div.show{
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #03bcf4, 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 30px #03bcf4;
+}
+
+.button .st0{
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 170px;
+    stroke-dashoffset: 170px;
+    animation: line 2s forwards;
+}
+@keyframes line{
+    0%{stroke-dashoffset: 170px;}
+    100%{stroke-dashoffset: 0;}
+}
+
+.button>div .text{
+    position: absolute;
+    left: 169px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: text 2s forwards;
+    animation-delay: 1.5s;
+}
+@keyframes text{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.button>div .text p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    color: #3de8ff;
+    width: 100%;
+    text-align: center;
+}
+
+.content>div{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 1500px;
+    opacity: 0;
+    transition: all 2s;
+}
+.content>div.active{
+    
+    left: 0;
+    opacity: 1;
+}
+
+/* .content div.alohadog{
+    position: absolute;
+    left: 1500px;
+    animation: content 2s 1;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes content{
+    0%{opacity: 0; left: 1500px;}
+    100%{opacity: 1; left: 0;}
+} */
+
+.content .imac>img{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-55%);
+}
+.content .imac div{
+    width: 550px;
+    height: 310px;
+    position: absolute;
+    left: 30.5%;
+    top:-253px;
+    overflow: hidden;
+}
+.content .imac div img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 2s;
+}
+
+.content .alohadog .imac div img.on{
+    top: -1351px;
+}
+.content .sweetmill .imac div img.on{
+    top: -1781px;
+}
+.content .seoul .imac div img.on{
+    top: -1360px;
+}
+.content .socar .imac div img.on{
+    top: -1638px;
+}
+
+.content .text{
+    position: absolute;
+    left: 65%;
+    top: -250px;
+}
+
+.content .text h1{
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+
+.content .text h1 span{
+    font-size: 36px;
+}
+
+.content .text h3{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 100px;
+    line-height: 40px;
+}
+
+.content .text p{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.content .btn{
+    width: 700px;
+    position: absolute;
+    bottom: -250px;
+    left: 65%;
+}
+
+.content .btn p{
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 70px;
+}
+
+.content .btn p span{
+    width: 0px;
+    border-bottom: 2px solid #fff;
+    display: block;
+    position: absolute;
+    right: 0;
+    transition: all 0.5s;
+    padding-top: 10px;
+}
+
+.content .btn p span.on{
+    width: 720px;
+}
+.content .btn p span.on2{
+    width: 550px;
+}
+
+.content .btn p span img{
+    position: absolute;
+    top: 30%;
+}
+
+.socar .ipad{
+    position: absolute;
+    top: -40px;
+    left: 28%;
+}
+
+.socar .ipad div{
+    width: 210px;
+    height: 280px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.socar .ipad div img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.socar .iphone{
+    position: absolute;
+    top: 40px;
+    left: 38%;
+}
+
+.socar .iphone div{
+    width: 97px;
+    height: 209px;
+    background-color: #fff;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.socar .iphone div img{
+    width: 100%;
+}
+
+.detail-sub_alohadog{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+.sub-alohadog ul{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.sub-alohadog ul li{
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+}
+
+.sub-alohadog ul li:nth-child(1){
+    transform: rotate(45deg);
+}
+.sub-alohadog ul li:nth-child(2){
+    transform: rotate(-45deg);
+}
+
+.detail-sub_sweetmill{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+.detail-sub_seoul{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+.detail-sub_socar{
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+
+

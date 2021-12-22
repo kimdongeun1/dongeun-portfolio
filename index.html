@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIM DONG EUN</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <!-- <script src="js/gulpfile.js"></script> -->
+    <!-- <script src="js/examples.js"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/examples.css">
+
+    <script>
+        $(function () {
+            $('#fullpage').fullpage({
+                autoScrolling: true,
+                anchors: ['first', 'second', 'fourth'],
+                navigation: true,
+                sectionSelector: 'section',
+                // easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
+            })
+
+            $(window).scroll(function () {
+                if ($('#section2').hasClass('active') == true) {
+                    $('#section2').addClass('on')
+                } else {
+                    $('#section2').removeClass('on')
+                }
+            })
+            $(window).scroll(function () {
+                if ($('#section3').hasClass('active') == true) {
+                    $('#section3').addClass('on')
+                } else {
+                    $('#section3').removeClass('on')
+                }
+            })
+            $(window).scroll(function () {
+                if ($('#section4').hasClass('active') == true) {
+                    $('#section4').addClass('on')
+
+                    var Txt = 100;
+                    $({
+                        val: 0,
+                    }).animate({
+                        val: Txt
+                    }, {
+                        duration: 5500,
+                        step: function () {
+                            var num = numberWithCommas(Math.floor(this.val));
+                            $(".Count").text(num);
+                        },
+
+                        complete: function () {
+                            var num = numberWithCommas(Math.floor(this.val));
+                            $(".Count").text(num);
+                        }
+
+                    });
+
+                    function numberWithCommas(x) {
+                        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    }
+
+                } else {
+                    $('#section4').removeClass('on')
+                }
+            })
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="fullpage">
+            <section id="section1">
+                <div class="bg-star">
+                    <img src="image/star.png" alt="star">
+                    <img class="star" src="image/star2.png" alt="star">
+                </div>
+                <div class="five-g">
+                    <div class="five-g_main">
+                        <div class="border">
+                            <div></div>
+                        </div>
+                        <div class="text">
+                            <p>습득력이</p>
+                            <img src="image/5g.png" alt="5g">
+                        </div>
+                    </div>
+                    <div class="five-g_main_line">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1500px" height="900px"
+                            viewBox="0 0 1500 900" style="enable-background:new 0 0 1500 900;" xml:space="preserve">
+                            <polyline class="st0"
+                                points="59.6,339.56 59.6,184.15 130.48,113.27 1360.34,113.27 1360.34,464.64 " />
+                        </svg>
+                        <div class="arrow">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                        </div>
+                        <div class="arrow2">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                            <img src="image/5g-line-arrow.png" alt="arrow">
+                        </div>
+                    </div>
+                    <div class="five-g_sub_line">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1500 900"
+                            style="enable-background:new 0 0 1500 900;" xml:space="preserve">
+
+                            <line class="st0" x1="476.48" y1="435.62" x2="1238.96" y2="435.62" />
+                            <polyline class="st0" points="476.55,391.23 487.35,391.23 656.71,221.87 1147.47,221.87 " />
+                            <polyline class="st0" points="476.55,411.92 571.59,411.92 644.18,339.33 894.81,339.33 " />
+                            <polyline class="st0" points="476.48,468.44 539.19,468.44 625.66,554.92 860.02,554.92 " />
+                            <polyline class="st0" points="476.55,495.8 489.51,495.8 677.75,684.05 1147.91,684.05 " />
+                            <circle class="st1" cx="1244.22" cy="435.66" r="7.56" />
+                            <circle class="st1" cx="897.91" cy="339.33" r="7.56" />
+                            <circle class="st1" cx="865.28" cy="554.96" r="7.56" />
+                            <circle class="st1" cx="1153.17" cy="684.09" r="7.56" />
+                            <circle class="st1" cx="1152.01" cy="221.87" r="7.56" />
+                        </svg>
+
+                    </div>
+                    <div class="five-g_text">
+                        <div class="text1">
+                            <div class="title">
+                                <p><span>G</span>ood</p>
+                            </div>
+                            <div class="cont">
+                                <p>보기좋은 디자인</p>
+                            </div>
+                        </div>
+                        <div class="text2">
+                            <div class="title">
+                                <p><span>G</span>em</p>
+                            </div>
+                            <div class="cont">
+                                <p>보석같은 인재</p>
+                            </div>
+                        </div>
+                        <div class="text3">
+                            <div class="title">
+                                <p><span>G</span>row</p>
+                            </div>
+                            <div class="cont">
+                                <p>성장하는 디자이너</p>
+                            </div>
+                        </div>
+                        <div class="text4">
+                            <div class="title">
+                                <p><span>G</span>aiety</p>
+                            </div>
+                            <div class="cont">
+                                <p>즐거움을 주는 디자인</p>
+                            </div>
+                        </div>
+                        <div class="text5">
+                            <div class="title">
+                                <p><span>G</span>ift</p>
+                            </div>
+                            <div class="cont">
+                                <p>재능을 가진 디자이너</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="five-g_arrow">
+                    <ul>
+                        <li><img src="image/arrow.png" alt="arrow"></li>
+                        <li><img src="image/arrow2.png" alt="arrow"></li>
+                        <li><img src="image/arrow3.png" alt="arrow"></li>
+                        <li><img src="image/arrow4.png" alt="arrow"></li>
+                        <li><img src="image/arrow5.png" alt="arrow"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="section2">
+                <div class="inner">
+                    <h1>ABOUT ME!</h1>
+                    <div class="about-me">
+                        <div class="picture">
+                            <img src="image/profle.jpg" alt="profle">
+                        </div>
+                        <div class="profle">
+                            <div class="profle-line">
+                                <svg version="1.1" id="long" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="600px"
+                                    height="50px" viewBox="0 0 600 50" style="enable-background:new 0 0 600 50;"
+                                    xml:space="preserve">
+                                    <line class="st0" x1="0" y1="25" x2="600" y2="25" />
+                                </svg>
+                                <svg version="1.1" id="short" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="215px"
+                                    height="50px" viewBox="0 0 215 50" style="enable-background:new 0 0 215 50;"
+                                    xml:space="preserve">
+                                    <line class="st1" x1="-0.45" y1="25" x2="215.45" y2="25" />
+                                </svg>
+                                <div class="circle">
+                                    <img src="image/circle.png" alt="circle">
+                                    <img src="image/circle.png" alt="circle">
+                                    <img src="image/circle.png" alt="circle">
+                                </div>
+                            </div>
+                            <div class="profle-text">
+                                <div class="text-box">
+                                    <div class="text1">
+                                        <div class="title">
+                                            <p>PROFILE</p>
+                                        </div>
+                                        <div class="cont">
+                                            <p><span>name</span>김동은</p>
+                                            <p><span>ages</span>1993.11.27</p>
+                                            <p><span>address</span>부산광역시 연제구</p>
+                                            <p><span>e-mail</span>vlvmffpdlsl@naver.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="text2">
+                                        <div class="title">
+                                            <p>HISTORY</p>
+                                        </div>
+                                        <div class="cont">
+                                            <p><span>2012.02</span><br>부산동의과학대학 실내건축과 입학</p>
+                                            <p><span>2021.07</span><br>부산 양정인력개발센터<br>
+                                                UX/UI 웹디자이너/웹퍼블리셔 교육수료(5개월)</p>
+                                        </div>
+                                    </div>
+                                    <div class="text3">
+                                        <div class="title">
+                                            <p>LICENSE</p>
+                                        </div>
+                                        <div class="cont">
+                                            <p>웹 디자인 기능사 (예정)</p>
+                                            <p>운전면혀 2종</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-line">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1280px"
+                                    height="225px" viewBox="0 0 1280 225" style="enable-background:new 0 0 1280 225;"
+                                    xml:space="preserve">
+                                    <polyline class="st0"
+                                        points="49.46,0.72 49.46,93.6 180.14,224.28 1187.78,224.28 " />
+                                </svg>
+
+                            </div>
+                            <div class="skill-cont">
+                                <div class="cont1">
+                                    <img src="image/file.png" alt="file">
+                                    <p>Photoshop</p>
+                                    <div>
+                                        <span class="first"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="cont2">
+                                    <img src="image/file.png" alt="file">
+                                    <p>Illustrator</p>
+                                    <div>
+                                        <span class="first"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="cont3">
+                                    <img src="image/file.png" alt="file">
+                                    <p>HTML/CSS</p>
+                                    <div>
+                                        <span class="first"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="cont4">
+                                    <img src="image/file.png" alt="file">
+                                    <p>Jquery</p>
+                                    <div>
+                                        <span class="first"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section3">
+                <div class="sec3-bg">
+                    <div id="early2021">
+                        <div class="top">
+                        <div class="inner">
+                          <div class="c1_s">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png" class="c1_s1" style="top:142px;left:0;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png" class="c1_s2" style="top:252px;left:50px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png" class="c1_s3" style="top:218px;left:100px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png" class="c1_s4" style="top:0;left:150px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png" class="c1_s5" style="top:110px;left:598px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png" class="c1_s6" style="top:292px;left:-150px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png" class="c1_s7" style="top:143px;left:-100px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png" class="c1_s8" style="top:136px;left:900px;">
+                          </div>
+                          <div class="c1_s" style="position:absolute;top:0;left:50%;width:100%;height:417px;margin:400px 0px 0px -408px;transform:scale(1.3)">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png" class="c1_s1" style="top:142px;left:0;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png" class="c1_s2" style="top:252px;left:1007px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png" class="c1_s3" style="top:218px;left:1000px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png" class="c1_s4" style="top:0;left:1000px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png" class="c1_s5" style="top:200px;left:1200px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png" class="c1_s6" style="top:292px;left:713px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png" class="c1_s7" style="top:143px;left:805px;">
+                            <img src="http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png" class="c1_s8" style="top:136px;left:900px;">
+                          </div>
+                        </div></div>
+                      </div>
+                      
+
+                </div>
+                <div class="inner">
+                    <div class="design">
+                        <div class="web-design">
+                            <a href="web-design.html">
+                                <img src="image/design-bg.png" alt="design-bg">
+                                <p>WEB DESIGN</p>
+                                <div class="web-design_cont">
+                                    <div><img src="image/web-design.png" alt="web-design"></div>
+                                    <div class="cont-box">
+                                        <div class="cont1">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="360px"
+                                                height="390px" viewBox="0 0 360 390"
+                                                style="enable-background:new 0 0 360 390;" xml:space="preserve">
+                                                <path class="st0"
+                                                    d="M343.55,242.25c-3.69-2.93-4.5-8.38-1.66-12.26c2.91-3.97,8.45-4.86,12.38-1.98c3.93,2.88,4.76,8.43,1.85,12.4c-2.91,3.97-8.45,4.86-12.38,1.98l-0.43,0.18L220.24,387.22H49.11" />
+                                                <path class="st0"
+                                                    d="M293.06,121.87c-2.23-4.21-0.89-9.66,3.23-12.04c4.22-2.43,9.63-0.95,12.09,3.31c2.46,4.26,1.04,9.69-3.18,12.12s-9.63,0.95-12.09-3.31l-0.03-0.01L148.03,203.1H21.92" />
+                                                <path class="st0"
+                                                    d="M240.72,51.6c2.67-3.99,8.03-5.16,12.07-2.6c4.12,2.6,5.33,8.08,2.71,12.24c-2.62,4.16-8.09,5.43-12.21,2.84c-4.12-2.6-5.3-8.11-2.68-12.27l0.14-0.26L127.76,4.75L-1.82,4.78" />
+                                            </svg>
+                                        </div>
+                                        <div class="cont2">
+                                            <div>
+                                                <p>HTML</p>
+                                            </div>
+                                            <div>
+                                                <p>CSS</p>
+                                            </div>
+                                            <div>
+                                                <p>JQUERY</p>
+                                            </div>
+                                        </div>
+                                        <div class="cont3">
+                                            <div class="design-circle">
+                                                <div><img src="image/circle1.png" alt="circle"></div>
+                                                <div><img src="image/circle2.png" alt="circle"></div>
+                                                <div><img src="image/circle3.png" alt="circle"></div>
+                                            </div>
+                                            <div class="design-circle">
+                                                <div><img src="image/circle1.png" alt="circle"></div>
+                                                <div><img src="image/circle2.png" alt="circle"></div>
+                                                <div><img src="image/circle3.png" alt="circle"></div>
+                                            </div>
+                                            <div class="design-circle">
+                                                <div><img src="image/circle1.png" alt="circle"></div>
+                                                <div><img src="image/circle2.png" alt="circle"></div>
+                                                <div><img src="image/circle3.png" alt="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="graphic-design">
+                            <a href="graphik-design.html">
+                                <img src="image/design-bg2.png" alt="design-bg">
+                                <p>GRAPHIC DESIGN<br>WEB PUBLISHING</p>
+                                <div class="graphic-design_cont">
+                                    <div class="cont-box1">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="cont-box">
+                                        <div class="cont1">
+                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="360px"
+                                                height="450px" viewBox="0 0 360 450"
+                                                style="enable-background:new 0 0 360 450;" xml:space="preserve">
+                                                <path class="st0"
+                                                    d="M51.56,52.29c-1.9-4.45-6.99-6.59-11.45-4.78c-4.51,1.83-6.68,7.01-4.83,11.57c1.85,4.56,7,6.78,11.52,4.95s6.68-7.01,4.83-11.57l-0.1-0.28l113.1-48.16h162.85" />
+                                                <path class="st0"
+                                                    d="M72.91,388.3c2.54-4.22,1.27-9.83-2.91-12.34s-9.61-1.12-12.15,3.09c-2.54,4.22-1.21,9.67,2.97,12.18c4.02,2.41,9.2,1.22,11.85-2.63l0.16-0.19l91.77,56.52h162.87" />
+                                            </svg>
+                                        </div>
+                                        <div class="cont2">
+                                            <div>
+                                                <p>PHOTOSHOP</p>
+                                            </div>
+                                            <div>
+                                                <p>ILLUSTRATOR</p>
+                                            </div>
+                                        </div>
+                                        <div class="cont3">
+                                            <div class="design-circle">
+                                                <div><img src="image/circle1.png" alt="circle"></div>
+                                                <div><img src="image/circle2.png" alt="circle"></div>
+                                                <div><img src="image/circle3.png" alt="circle"></div>
+                                            </div>
+                                            <div class="design-circle">
+                                                <div><img src="image/circle1.png" alt="circle"></div>
+                                                <div><img src="image/circle2.png" alt="circle"></div>
+                                                <div><img src="image/circle3.png" alt="circle"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section4">
+                <div class="inner">
+                    <div class="contact">
+                        <div class="contact-main">
+                            <div>
+                                <div><img src="image/contact-2.png" alt="contact"></div>
+                                <div><img src="image/contact-1.png" alt="contact"></div>
+                                <div><img src="image/contact-me.png" alt="contact"></div>
+                            </div>
+                        </div>
+                        <div class="contact-line">
+                            <div>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="750px"
+                                    height="100px" viewBox="0 0 750 100" style="enable-background:new 0 0 750 100;"
+                                    xml:space="preserve">
+                                    <polyline class="st0" points="702.35,85.61 623.19,29.56 68.55,29.56 " />
+                                </svg>
+                                <img src="image/circle.png" alt="circle">
+                            </div>
+                            <div>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="750px"
+                                    height="150px" viewBox="0 0 750 150" style="enable-background:new 0 0 750 150;"
+                                    xml:space="preserve">
+                                    <polyline class="st1"
+                                        points="668.94,135.11 535.85,135.11 480.2,80.84 81.06,80.84 81.06,14.89 457.93,14.89 457.93,80.36 " />
+                                </svg>
+                            </div>
+                            <div>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="750px"
+                                    height="200px" viewBox="0 0 750 200" style="enable-background:new 0 0 750 200;"
+                                    xml:space="preserve">
+                                    <polyline class="st2"
+                                        points="721.27,113.67 644.22,190.72 463.87,74.98 28.73,74.98 28.73,9.28 429.28,9.28 429.28,74.5 " />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="contact-sub">
+                            <div>
+                                <img src="image/contact-3.png" alt="contact">
+                                <img src="image/contact-4.png" alt="contact">
+                                <p>열정<br>
+                                    <spna class="Count">100</spna>%
+                                </p>
+                            </div>
+                            <div>
+                                <img src="image/contact-3.png" alt="contact">
+                                <img src="image/contact-4.png" alt="contact">
+                                <p>성실<br>
+                                    <spna class="Count">100</spna>%
+                                </p>
+                            </div>
+                            <div>
+                                <img src="image/contact-3.png" alt="contact">
+                                <img src="image/contact-4.png" alt="contact">
+                                <p>습득력<br>
+                                    <spna class="Count">100</spna>%
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-text">
+                            <div class="title">
+                                <p>Tel</p>
+                                <p>Mail</p>
+                            </div>
+                            <div class="text">
+                                <p>010-8367-6525</p>
+                                <p>vlvmffpdlsl@naver.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
