@@ -1472,3 +1472,68 @@ li {
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
+
+@media (max-width:1700px) {
+    .five-g .five-g_main_line .st0{
+        display: none;
+    }
+    .five-g .five-g_main_line .arrow{
+        display: none;
+    }
+
+    .five-g .five-g_main{
+        transform: scale(0.8) translateY(-60%);
+    }
+
+    .five-g .five-g_sub_line{
+        left: -6%;
+    }
+
+    @keyframes cont {
+        0% {
+            top: -55px;
+            opacity: 0;
+        }
+    
+        100% {
+            top: -10px;
+            opacity: 1;
+        }
+    }
+
+    .five-g_text .title{
+        overflow: visible;
+    }
+    @keyframes title {
+        0% {
+            top: 55px;
+            opacity: 0;
+        }
+    
+        100% {
+            top: -30px;
+            opacity: 1;
+        }
+    }
+
+
+    #section1 .five-g_text>div{
+        transform: scale(0.7);
+    }
+
+    #section2 h1{
+        transform: scale(0.7);
+        margin-bottom: 5px;
+    }
+    #section2 .about-me{
+        transform: scale(0.7);
+    }
+
+    #section3 .design{
+        transform: scale(0.7);
+    }
+
+    #section4 .contact{
+        transform: scale(0.7);
+    }
+}
