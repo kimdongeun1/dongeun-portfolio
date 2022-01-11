@@ -342,5 +342,23 @@ section{
     display: none;
 }
 
+@media (max-width:1700px){
+    section .button{
+        transform: scale(0.9) translateY(-50%);
+    }
+
+    .content>div{
+        transform: scale(0.9);
+    }
+
+    .content .text{
+        left: 70%;
+    }
+
+    .content .btn{
+        left: 70%;
+    }
+}
+
 
 
